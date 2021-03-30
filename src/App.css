@@ -30,6 +30,10 @@
 p {
   color: yellow;
 }
+span {
+  color: blue;
+  text-transform: uppercase;
+}
 
 @keyframes App-logo-spin {
   from {

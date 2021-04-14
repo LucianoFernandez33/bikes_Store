@@ -1,22 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/NavBar/NavBar';
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola soy <span>Luciano Fernandez</span>  y estoy creando mi primer app con React JS!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NavBar/>
+        <ItemListContainer greeting="HOLA A TODOS" />
+        <img src={logo} className="App-logo" alt="logo" />    
       </header>
     </div>
   );

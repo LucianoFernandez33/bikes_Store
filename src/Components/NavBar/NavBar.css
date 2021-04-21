@@ -1,4 +1,7 @@
-.navBar {
+.container-nav {
     display: flex;
-    background-color: red;
+    justify-content: flex-end;
+}
+.App-logo {
+    width: 8%;
 }

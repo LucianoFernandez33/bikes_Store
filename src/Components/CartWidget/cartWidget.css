@@ -1,0 +1,8 @@
+.container-img {
+    display: flex;
+    justify-content: flex-end;
+    width: 18%;
+}
+img {
+    width: 18%;
+}

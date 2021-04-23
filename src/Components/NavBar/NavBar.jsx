@@ -1,27 +1,26 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../../assets/logo192.png'
+import logo2 from '../../assets/logo2.png'
 import './NavBar.css';
 import {Navbar,Nav} from 'react-bootstrap';
 import CartWidget from '../cartWidget/CartWidget';
 
 const NavBar =() => {
     return (
-        <div className="navBar">
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="container-nav">
-                <img src={logo} className="App-logo" alt="logo" />
+        <div className="container-nav">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="container-nav-child">
+                <img src={logo2} className="App-logo" alt="logo" />
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#features">Link-1</Nav.Link>
-                        <Nav.Link href="#pricing">Link-2</Nav.Link>
+                        <Nav.Link href="#features">BICICLETAS</Nav.Link>
+                        <Nav.Link href="#pricing">ACCESORIOS</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 <CartWidget/>
             </Navbar>
-            
         </div>
-
+            
     )    
 }
 export default NavBar;

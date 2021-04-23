@@ -1,11 +1,12 @@
 import React from "react";
 import './cartWidget.css';
 import carrito from '../../assets/carrito.png';
-
+import {Button} from 'react-bootstrap';
 const CartWidget =() => {
     return (
         <div className="container-img">
-            <img src={carrito} className="img-carrito" alt="carrito de compra" />
+            <Button><img src={carrito} alt=""/>
+              <b id="contador"> 0</b></Button>{' '}
         </div>
 
     )    

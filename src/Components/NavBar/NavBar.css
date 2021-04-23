@@ -1,7 +1,28 @@
+.mr-auto {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px!important;
+}
 .container-nav {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.container-nav-child {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 .App-logo {
-    width: 5vh;
+    width: 15vh;
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 20px;
+}
+@media (min-width: 992px) {
+
 }

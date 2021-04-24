@@ -1,0 +1,11 @@
+.catalogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: rgb(65, 62, 62);
+}
+.container-tit {
+    font-size: 6vh;
+    color: royalblue;
+    margin: 10px 0px;
+}

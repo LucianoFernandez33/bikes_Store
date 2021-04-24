@@ -1,18 +1,24 @@
-import React from 'react'
+import React from 'react';
+import Counter from '../counter/Counter'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./Item.css"
 import {Card, Button} from 'react-bootstrap';
-const Item = ({img, description, title, price, stock}) =>{
+
+const Item = ({img, description, tittle, price, stock}) =>{
 
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={img} />
-            <Card.Body>
-                <Card.Title>{title}</Card.Title>
-                <Card.Text>{description}</Card.Text>
-                <Card.Text>{price}</Card.Text>
-                <Card.Text>{stock}</Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-        </Card>     
+        <div className="container-card-child">
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src={img} />
+                <Card.Body>
+                    <Card.Title>{tittle}</Card.Title>
+                    <Card.Text>{description}</Card.Text>
+                    <Card.Text>{price}</Card.Text>
+                    <Card.Text>{stock}</Card.Text>
+                    <Counter stock={stock}/>
+                </Card.Body>
+            </Card> 
+        </div>   
     )
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo2 from '../../assets/logo2.png'
+import logo2 from '../../Assets/logo2.png'
 import './NavBar.css';
 import {Navbar,Nav} from 'react-bootstrap';
 import CartWidget from '../cartWidget/CartWidget';

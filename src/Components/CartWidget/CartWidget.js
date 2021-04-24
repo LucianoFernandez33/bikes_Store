@@ -1,6 +1,6 @@
 import React from "react";
 import './cartWidget.css';
-import carrito from '../../assets/carrito.png';
+import carrito from '../../Assets/carrito.png';
 import {Button} from 'react-bootstrap';
 const CartWidget =() => {
     return (

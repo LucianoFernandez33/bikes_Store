@@ -5,10 +5,12 @@ import Name from './Components/name/Name'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <nav>
         <NavBar/>
-        <ItemListContainer/>
+      </nav>
+      <header className="App-header">
         <Name nombre='LF'/>  
+        <ItemListContainer/>
       </header>
     </div>
   );

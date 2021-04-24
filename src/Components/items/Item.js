@@ -2,7 +2,7 @@ import React from 'react';
 import Counter from '../counter/Counter'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Item.css"
-import {Card, Button} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 
 const Item = ({img, description, tittle, price, stock}) =>{
 
@@ -13,7 +13,7 @@ const Item = ({img, description, tittle, price, stock}) =>{
                 <Card.Body>
                     <Card.Title>{tittle}</Card.Title>
                     <Card.Text>{description}</Card.Text>
-                    <Card.Text>{price}</Card.Text>
+                    <Card.Text> $ {price}</Card.Text>
                     <Card.Text>{stock}</Card.Text>
                     <Counter stock={stock}/>
                 </Card.Body>

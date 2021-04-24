@@ -32,7 +32,32 @@ export const ItemListContainer = () => {
          price:" 50000",
          stock: 6,
          id: 3
+      },
+      {
+         img: "./venzo-atix.jpeg",
+         description: "R29 - 2x10v - Full Shimano Deore",
+         tittle: "Venzo Atix - 2x10v",
+         price:" 140000",
+         stock: 6,
+         id: 4
+      },
+      {
+         img: "./venzo-primal.jpeg",
+         description: "R29 - 3x8 - 24v, Shimano Altus, frenos a disco hidráulicos",
+         tittle: "Venzo PRIMAL XC Shadow",
+         price:" 75000",
+         stock: 6,
+         id: 5
+      },
+      {
+         img: "./venzo-raptor.jpeg",
+         description: "R29 - 3x8 - Shimano Altus, frenos a disco hidráulicos",
+         tittle: "Venzo RAPTOR EVO",
+         price:" 130000",
+         stock: 6,
+         id: 5
       }
+
       ]
          setTimeout(()=>{
             resolve(catalogo)

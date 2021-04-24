@@ -3,6 +3,7 @@
 }
 
 .App-header {
+  width: 100%;
   background-color: #d5d9df;
   display: flex;
   flex-direction: column;

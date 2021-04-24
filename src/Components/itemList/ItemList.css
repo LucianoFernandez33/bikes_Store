@@ -1,6 +1,7 @@
 .catalogo {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     color: rgb(65, 62, 62);
 }
@@ -8,4 +9,7 @@
     font-size: 6vh;
     color: royalblue;
     margin: 10px 0px;
+}
+.container-card {
+    margin: 20px 30px;
 }

@@ -8,7 +8,7 @@ import CartWidget from '../cartWidget/CartWidget';
 const NavBar =() => {
     return (
         <div className="container-nav">
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="container-nav-child">
+            <Navbar collapseOnSelect expand="lg" className="container-nav-child">
                 <img src={logo2} className="App-logo" alt="logo" />
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

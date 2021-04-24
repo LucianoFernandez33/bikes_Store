@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: rgb(223, 148, 50);
 }
 .App-logo {
     width: 15vh;

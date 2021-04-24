@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.container-buttons {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.buttonComprar {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    border: 1px solid darkgray;
+    background-color: darkgray;
+    color: darkgreen;
+    height: 30px;
+}
+.buttonComprar:hover {
+    background-color: rgb(60, 55, 121);
+    color: rgb(244, 244, 245);
+    border: 1px solid white;
+}
+.buttonSumar, .buttonRestar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 23px;
+    background-color: rgb(31, 177, 116);
+    border-color: rgb(31, 177, 116);
+    color: cornsilk;
+    width: max-content;
+}
+.container-counter {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    align-items: center;
+    margin: 2px 10px;
+}

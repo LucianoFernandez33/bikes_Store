@@ -1,0 +1,21 @@
+.container-img-card {
+    height: 215px;
+    padding: 3px;
+    overflow: hidden;
+}
+.button-Caraterist {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    align-items: center;
+    border: 1px solid darkgray;
+    background-color: darkgray;
+    color: blue;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}

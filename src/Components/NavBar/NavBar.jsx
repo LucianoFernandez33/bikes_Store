@@ -1,9 +1,10 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo2 from '../../Assets/logo2.png'
-import './NavBar.css';
-import {Navbar,Nav} from 'react-bootstrap';
 import CartWidget from '../cartWidget/CartWidget';
+import {Navbar,Nav} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar =() => {
     return (
@@ -12,12 +13,13 @@ const NavBar =() => {
                 <img src={logo2} className="App-logo" alt="logo" />
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#features">BICICLETAS</Nav.Link>
-                        <Nav.Link href="#pricing">ACCESORIOS</Nav.Link>
-                    </Nav>
+                    <ul className="mr-auto">
+                        <li><Link to={`/`} >HOME</Link></li>
+                        <li><Link to={`/bikes`}>BICICLETAS</Link></li>
+                        <li><Link to={`/detail`} >ACCESORIOS</Link></li>
+                        <CartWidget/>
+                    </ul>
                 </Navbar.Collapse>
-                <CartWidget/>
             </Navbar>
         </div>
             

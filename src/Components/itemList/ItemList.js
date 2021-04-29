@@ -6,7 +6,7 @@ const ItemList = ({productos}) =>{
 
     return (
         <>
-        <div className="container-tit">CATÁLOGO</div>
+        <div className="container-tit">CATÁLOGO DE PRODUCTOS</div>
         <div className="catalogo">
             {productos.map((arrayItems)=>
             <div key={arrayItems.id} className="container-card">

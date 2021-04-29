@@ -1,0 +1,14 @@
+.container-products {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+}
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    right: 50%
+}

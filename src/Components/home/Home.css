@@ -1,0 +1,16 @@
+.container-card-carousel {
+    display: flex;
+    justify-content: center;
+    margin: 20px 5px;
+}
+.container-carousel-child {
+    width: 60%;
+}
+.container-carousel-child h3 {
+    color: rgb(228, 134, 27);
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 2rem;
+}

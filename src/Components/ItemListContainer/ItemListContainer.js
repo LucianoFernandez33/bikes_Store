@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../itemList/ItemList";
-import loader from '../../Assets/loader.gif'
+import './ItemListContainer.css'
+import {Spinner} from 'react-bootstrap';
 
 export const ItemListContainer = () => {
    
@@ -15,6 +16,8 @@ export const ItemListContainer = () => {
          tittle: "SKILINE EVO Shadow Series",
          price: "55000",
          stock: 6,
+         marca: "VENZO",
+         category: "bicicletas",
          id: 1 
       },
       {
@@ -23,6 +26,8 @@ export const ItemListContainer = () => {
          tittle: "Firebird Coyote ",
          price: "50000",
          stock: 6,
+         marca: "FIREBIRD",
+         category: "bicicletas",
          id: 2
       },
       {
@@ -31,6 +36,8 @@ export const ItemListContainer = () => {
          tittle: "Raleight Mojave 2.0",
          price:" 50000",
          stock: 6,
+         marca: "RALEIGH",
+         category: "bicicletas",
          id: 3
       },
       {
@@ -39,6 +46,8 @@ export const ItemListContainer = () => {
          tittle: "Venzo Atix - 2x10v",
          price:" 140000",
          stock: 6,
+         marca: "VENZO",
+         category: "bicicletas",
          id: 4
       },
       {
@@ -47,6 +56,8 @@ export const ItemListContainer = () => {
          tittle: "Venzo PRIMAL XC Shadow",
          price:" 75000",
          stock: 6,
+         marca: "VENZO",
+         category: "bicicletas",
          id: 5
       },
       {
@@ -55,9 +66,40 @@ export const ItemListContainer = () => {
          tittle: "Venzo RAPTOR EVO",
          price:" 130000",
          stock: 6,
-         id: 5
+         marca: "VENZO",
+         category: "bicicletas",
+         id: 6
+      },
+      {
+         img: "./vairo-3.5.jpg",
+         description: "R29 - XR 3.5 - Bicicleta MountainBike de Aluminio Rodado 29, Frenos a Disco, Suspensión C/Bloqueo, Llantas Doble Pared, Full Shimano.",
+         tittle: "Nueva VAIRO XR 3.5 2021",
+         price:" 130000",
+         stock: 6,
+         marca: "VAIRO",
+         category: "bicicletas",
+         id: 7
+      },
+      {
+         img: "./vairo-3.8.jpg",
+         description: "R29 - 3x8 - Freno a Disco Shimano / Tektro",
+         tittle: "Nueva VAIRO XR 3.8 29",
+         price:" 130000",
+         stock: 6,
+         marca: "VAIRO",
+         category: "bicicletas",
+         id: 8
+      },
+      {
+         img: "./vairo-5.0.jpg",
+         description: "R29 - XR 5.0 - Aluminio 6061T6,Freno A disco, Hidráulico – Shimano/Tektro",
+         tittle: "Nueva VAIRO 5.0",
+         price:" 150000",
+         stock: 6,
+         marca: "VAIRO",
+         category: "bicicletas",
+         id: 9
       }
-
       ]
          setTimeout(()=>{
             resolve(catalogo)
@@ -76,8 +118,8 @@ export const ItemListContainer = () => {
 },[]);
    
 return(
-  <div>
-     {arrayItems.length > 0 ? <ItemList productos={arrayItems}/> : <img src={loader}/>}
+  <div className="container-products">
+     {arrayItems.length > 0 ? <ItemList productos={arrayItems}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
   </div>
 )
       

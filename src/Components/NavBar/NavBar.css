@@ -8,15 +8,25 @@
 }
 .container-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     width: 100%;
+    background-color: #5b5b5b;
 }
 .container-nav-child {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgb(223, 148, 50);
+}
+li {
+    list-style: none;
+    padding: 10px;
+}
+li a {
+    color: white;
+}
+li a:hover {
+    color:yellowgreen;
 }
 .App-logo {
     width: 15vh;
@@ -24,6 +34,16 @@
     padding: 6px;
     margin-right: 20px;
 }
-@media (min-width: 992px) {
+@media (max-width:480px) {
+    .mr-auto  {
+       display: flex;
+       flex-direction: column; 
+    }
+    li {
+        margin: 2px 0;
+    }
+    .container-img {
+        margin-top: 10px;
 
+    }
 }

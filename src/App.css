@@ -1,13 +1,13 @@
 .App {
   text-align: center;
+  background-color: #efefef; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .App-header {
-  width: 100%;
-  background-color: #d5d9df;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   /*font-size: calc(10px + 2vmin);*/
   color: white;
 }

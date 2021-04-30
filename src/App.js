@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './Components/Home/Home'
 import NavBar from './Components/NavBar/NavBar';
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footers/Footer'
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 import ItemDetail from "./Components/ItemDetail/ItemDetail"
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./ItemDetail.css"
-import "../itemList/ItemList"
-import Counter from '../counter/Counter'
+import "../ItemList/ItemList"
+import Counter from '../Counter/Counter'
 import venzo from '../../Assets/venzo.jpg'
 
 const ItemDetail = ({img, description, tittle, price, stock}) =>{

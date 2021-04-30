@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "../itemList/ItemList";
+import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css'
 import {Spinner} from 'react-bootstrap';
 

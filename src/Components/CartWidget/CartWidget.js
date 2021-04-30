@@ -1,7 +1,7 @@
 import React from "react";
 import carrito from '../../Assets/carrito.png';
 import {Button} from 'react-bootstrap';
-import './cartWidget.css';
+import './CartWidget.css';
 const CartWidget =() => {
     return (
         <div className="container-img">

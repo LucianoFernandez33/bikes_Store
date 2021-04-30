@@ -5,7 +5,7 @@ import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footer/Footer'
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 import ItemDetail from "./Components/ItemDetail/ItemDetail"
-import Name from './Components/Name/Name'
+
 
 
 function App() {

@@ -11,7 +11,10 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    background-color: #5b5b5b;
+    background-color: rgba(91, 91,91, 0.4);
+    position: absolute;
+    top: 0;
+    z-index: 2;
 }
 .container-nav-child {
     display: flex;
@@ -34,16 +37,23 @@ li a:hover {
     padding: 6px;
     margin-right: 20px;
 }
+.dropdown-menu {
+    background-color: rgba(91, 91,91, 0.4);
+}
 @media (max-width:480px) {
     .mr-auto  {
        display: flex;
        flex-direction: column; 
     }
     li {
-        margin: 2px 0;
+        margin: 1px 0;
+        padding: 0;
     }
     .container-img {
         margin-top: 10px;
 
+    }
+    .dropdown-menu {
+        background-color: rgba(91, 91,91, 0.9);
     }
 }

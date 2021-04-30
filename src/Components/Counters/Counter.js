@@ -19,8 +19,8 @@ const Counter = ({})=> {
     
     return (
             <>
-            <div className="container">
-                <div className="container-buttons">
+            <div className="container-buttons">
+                <div className="container-buttons-child">
                     <Button className="buttonSumar" onClick={upp} disable={value===5} >+</Button>
                     <p className="container-counter">{value}</p>
                     <Button onClick={down} className="buttonRestar">-</Button>

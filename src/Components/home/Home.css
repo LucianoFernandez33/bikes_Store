@@ -1,10 +1,13 @@
+.container-home {
+    background-color: #efefef;
+    margin: 0px 70px;
+}
 .container-card-carousel {
     display: flex;
     justify-content: center;
-    margin: 20px 5px;
 }
 .container-carousel-child {
-    width: 60%;
+    width: 100%;
 }
 .container-carousel-child h3 {
     color: rgb(228, 134, 27);
@@ -13,4 +16,25 @@
     font-weight: 600;
     text-transform: capitalize;
     line-height: 2rem;
+}
+.container-cards-sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 3px;
+}
+.container-child-cards-sponsors {
+    display: flex;
+    justify-content: center;
+}
+.img-sponsors {
+    width: 64%;
+
+}
+
+@media (max-width:480px) {
+    .container-home {
+        background-color: #efefef;
+        margin: 0px;
+    }
 }

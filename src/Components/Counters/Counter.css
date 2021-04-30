@@ -1,11 +1,11 @@
-.container {
+.container-buttons{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     align-content: center;
 }
-.container-buttons {
+.container-buttons-child {
     display: flex;
     align-items: center;
     padding: 5px;

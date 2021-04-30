@@ -99,11 +99,131 @@ export const ItemListContainer = () => {
          marca: "VAIRO",
          category: "bicicletas",
          id: 9
-      }
+      },
+      {
+         img: "./Accesorios/venzo-casco.png",
+         description: "Con regulación y vicera - Talles M / L - Colores: negro/rojo, negro/verde, negro/azul",
+         tittle: "Casco Modelo 017",
+         price:" 5000",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 10
+      },
+      {
+         img: "./Accesorios/venzo-casco02.png",
+         description: "Con regulación y vicera - Talles M / L - Colores: negro/rojo, negro/verde, negro/azul",
+         tittle: "Casco Modelo 010",
+         price:" 5500",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 11
+      },
+      {
+         img: "./Accesorios/venzo-asiento.png",
+         description: "Rieles cuero sintetico - Tamaño 270 x 145 mm",
+         tittle: "Asiento VENZO MX",
+         price:" 6000",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 12
+      },
+      {
+         img: "./Accesorios/venzo-balizas.png",
+         description: "5 luces led - 3 funciones- Modo de carga 2 pillas AAA",
+         tittle: "Baliza VENZO 001-008",
+         price:" 3500",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 13
+      },
+      {
+         img: "./Accesorios/venzo-farol.png",
+         description: "1 luz led - 3 funciones - Carcaza de aluminio - Resistente a la lluvia",
+         tittle: "Farol delantero VENZO F01-006",
+         price:" 5500",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 14
+      },
+      {
+         img: "./Accesorios/venzo-gomaEspuma.png",
+         description: "Largo 128 mm",
+         tittle: "Puños VENZO de goma espuma E05-",
+         price:" 2500",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 15
+      },
+      {
+         img: "./Accesorios/venzo-guantes-cortos.png",
+         description: "Dedos cortos - Con abrojo y almohadillas - Talles S/M/L/XL",
+         tittle: "Guantes modelo 003",
+         price:" 6000",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 16
+      },
+      {
+         img: "./Accesorios/venzo-guantes-largos.png",
+         description: "Dedos largos - Con abrojo y almohadillas - Talles S/M/L/XL",
+         tittle: "Guantes modelo 001",
+         price:" 150000",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 17
+      }, 
+      {
+         img: "./Accesorios/venzo-lentes-rojos.png",
+         description: "2 lentes cambiables - Proteccion UV",
+         tittle: "Lentes modelo 001",
+         price:" 8000",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 18
+      },
+      {
+         img: "./Accesorios/venzo-lentes.png",
+         description: "2 lentes cambiables - Proteccion UV",
+         tittle: "Lentes modelo 002",
+         price:" 8000",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 19
+      },
+      {
+         img: "./Accesorios/venzo-llave.png",
+         description: "Lllaves allen medidas 2/2.5/3/4/5/6/8 - Saca cubiertas - Llaves de tubo 8/9/10/12",
+         tittle: "Herramienta VENZO F33 002-13 funciones",
+         price:" 4000",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 20
+      },
+      {
+         img: "./Accesorios/venzo-portasilla.png",
+         description: "Material fibra de carbono - Diametro 31.6 - Longitud 350mm",
+         tittle: "Portasilla VENZO XTV",
+         price:" 7000",
+         stock: 6,
+         marca: "VENZO",
+         category: "accesorios",
+         id: 21
+      } 
       ]
          setTimeout(()=>{
             resolve(catalogo)
-         },2000)
+         },1000)
       })
    
    listas.then((res)=>{

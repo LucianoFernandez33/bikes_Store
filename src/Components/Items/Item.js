@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from '../Counter/Counter'
+import Counter from '../Counters/Counter'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Item.css"
 import {Card, Button} from 'react-bootstrap';

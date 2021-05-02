@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
                 const catalogo = [
                     {
                         id: 1, 
-                        img: "./venzo.jpg",
+                        img: "../venzo.jpg",
                         description: "Cuadro Venzo Skiline Evo r-29, Aluminio 6061",
                         tittle: "SKILINE EVO Shadow Series",
                         price: "55000",
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
                     },
                     {
                         id: 2,
-                        img: "./firebird.jpg",
+                        img: "../firebird.jpg",
                         description: "Nueva Firebird R29 Coyote 21V Shimano",
                         tittle: "Firebird Coyote ",
                         price: "50000",
@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
                         category: "bicicletas"
                     },
                     {
-                        img: "./raleigh.jpg",
+                        img: "../raleigh.jpg",
                         id: 3,
                         description: "Nueva Raleight R29 Mojave 2.0 cuadro aluminio",
                         tittle: "Raleight Mojave 2.0",
@@ -226,23 +226,26 @@ const ItemDetailContainer = () => {
                 //generamos un retraso de 1 segundo al mostrar la card
                 setTimeout(()=>{
                     resolve(catalogo); //resuelve la promesa
+                    console.log(catalogo)
                 },1000);
                 })
         } 
 
     getItem().then(dato =>{
-        const itemFilter = dato.filter (item => item.id ==`${id}`)
+        const itemFilter = dato.filter(item => item.id == id)
+        console.log(dato)
+        console.log(id)
         console.log(itemFilter)
-        setDatos(itemFilter)},
+        setDatos(itemFilter)}
     )
      
  },[]);
 
- console.log(datos)
-
+ console.log(datos[0])
+ console.log(datos.length)
  return(
         <div>
-            {datos.lenght > 0  ? <ItemDetail datos={datos[0]}/> : 
+            {datos.length > 0  ? <ItemDetail datos={datos[0]}/> : 
             <p>Cargando...</p>}
         </div>  
     );     

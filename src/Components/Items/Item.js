@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import ItemCountContainer from '../ItemCountContainer/ItemCountContainer';
 
 const Item = ({img, description, tittle, price, stockTotal, id}) =>{
-
+    console.log(id)
     return (
         <div className="container-card-child">
             <Card style={{ width: '20rem'}}>

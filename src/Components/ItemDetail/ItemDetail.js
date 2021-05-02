@@ -18,7 +18,7 @@ const ItemDetail = ({datos}) =>{
                 <div className="container-card-body-itemDetail">
                     <h4>{datos.tittle}</h4>
                     <ul>
-                        <li>Horquilla Venzo con regulación + bloqueo - Cuadro de Aluminio</li>
+                        <li>{datos.description}</li>
                         <li>21 velocidades con cambio, descarrilador y manijas SHIMANO</li>
                         <li>Ruedas VENZo con mazas a rulemanes, Corride a disco mecánico</li>
                         <li>Talles: 14"(XS), 16"(S), 18"(M), 20"(L), 22"(XL)</li>

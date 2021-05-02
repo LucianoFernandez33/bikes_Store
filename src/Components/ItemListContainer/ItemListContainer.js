@@ -5,7 +5,7 @@ import {Spinner} from 'react-bootstrap';
 
 export const ItemListContainer = () => {
    
-   const [arrayItems, setArrayItems] = useState([])
+   const [datos, setDatos] = useState([])
    
    useEffect(()=>{
       const listas = new Promise((resolve, reject)=>{
@@ -227,7 +227,7 @@ export const ItemListContainer = () => {
       })
    
    listas.then((res)=>{
-      setArrayItems(res)
+      setDatos(res)
    })
    .catch(()=>{
       console.log("Hubo problemas al cargar")
@@ -239,7 +239,7 @@ export const ItemListContainer = () => {
    
 return(
   <div className="container-products">
-     {arrayItems.length > 0 ? <ItemList productos={arrayItems}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
+     {datos.length > 0 ? <ItemList productos={datos}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
   </div>
 )
       

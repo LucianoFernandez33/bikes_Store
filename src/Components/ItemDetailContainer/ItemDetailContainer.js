@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-    const [arrayItems, setArrayItems] = useState({})
+    
+    const [datos, setDatos] = useState({})
     const {id} = useParams()
-    console.log(id)
-
+    
     useEffect(()=>{ 
        const getItem = () =>{
+
             return new Promise((resolve, reject)=>{
                 const catalogo = [
                     {
@@ -224,7 +225,7 @@ const ItemDetailContainer = () => {
                 ];
                 //generamos un retraso de 1 segundo al mostrar la card
                 setTimeout(()=>{
-                    resolve(catalogo);
+                    resolve(catalogo); //resuelve la promesa
                 },1000);
                 })
         } 
@@ -232,22 +233,16 @@ const ItemDetailContainer = () => {
     getItem().then(dato =>{
         const itemFilter = dato.filter (item => item.id ==`${id}`)
         console.log(itemFilter)
-        setArrayItems(itemFilter)},
-
-     (rej)=>{
-         console.log("rechazada-->", rej)
-     })
-     .catch(()=>{
-         console.log("se produjo un error")
-     })
-     .finally(()=>{
-         console.log("el control ha finalizado")
-     }) 
+        setDatos(itemFilter)},
+    )
+     
  },[]);
- console.log(arrayItems)
+
+ console.log(datos)
+
  return(
         <div>
-            {arrayItems.lenght > 0  ? <ItemDetail arrayItems={arrayItems[0]}/> : 
+            {datos.lenght > 0  ? <ItemDetail datos={datos[0]}/> : 
             <p>Cargando...</p>}
         </div>  
     );     

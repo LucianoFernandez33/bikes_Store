@@ -41,3 +41,9 @@
     align-items: center;
     margin: 2px 8px;
 }
+.container-counter-stock {
+    margin: 1px 2px;
+    display: flex;
+    text-align: center;
+    background-color: burlywood;
+}

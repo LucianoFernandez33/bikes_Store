@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ItemCount from '../ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemCountContainer = ({id, stock}) => {
     const [stockTotal, setStockTotal] = useState(stock);

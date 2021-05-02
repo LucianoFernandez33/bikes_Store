@@ -7,13 +7,14 @@ import {Button} from 'react-bootstrap';
     
     return (
             <>
+                <p id={id} className="container-counter-stock">Stock: {stockTotal}</p>
             <div className="container-buttons">
                 <div className="container-buttons-child">
-                    <Button className="buttonSumar" >+</Button>
-                    <p className="container-counter">0</p>
-                    <Button className="buttonRestar">-</Button>
+                    <Button className="buttonSumar" onClick={sumar} disabled={!buttonActive}>+</Button>
+                    <p className="container-counter">{stockUsser}</p>
+                    <Button className="buttonRestar" onClick={restar} disabled={!buttonActive}>-</Button>
                 </div>
-                <Button className="buttonComprar">AGREGAR AL CARRITO</Button>
+                <Button className="buttonComprar" onClick={onAdd} disabled={!buttonActive}>AGREGAR AL CARRITO</Button>
             </div>    
             </>
         );

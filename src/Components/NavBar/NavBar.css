@@ -29,7 +29,7 @@ li a {
     color: white;
 }
 li a:hover {
-    color:yellowgreen;
+    color:rgb(16, 19, 11);
 }
 .App-logo {
     width: 15vh;

@@ -1,11 +1,11 @@
 import React from 'react';
-import Counter from '../Counters/Counter'
+import ItemCount from '../ItemCount/ItemCount'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Item.css"
 import {Card, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Item = ({img, description, tittle, price, stock}) =>{
+const Item = ({img, description, tittle, price, stock, id}) =>{
 
     return (
         <div className="container-card-child">
@@ -18,10 +18,10 @@ const Item = ({img, description, tittle, price, stock}) =>{
                     <Card.Text>{description}</Card.Text>
                     <Card.Text> $ {price}</Card.Text>
                     <Card.Text>{stock}</Card.Text>
-                    <Link to={`/detalle-del-producto`}>
+                    <Link to={`/item/${id}`}>
                         <Button className="button-Caraterist">Ver Caracteristicas</Button>
                     </Link>
-                    <Counter stock={stock}/>
+                    <ItemCount stock={stock}/>
                 </Card.Body>
             </Card> 
         </div>   

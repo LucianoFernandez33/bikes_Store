@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar/NavBar';
 import Footer from './Components/Footers/Footer'
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 import ItemDetail from "./Components/ItemDetail/ItemDetail"
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
 
 
@@ -14,8 +15,8 @@ function App() {
       <BrowserRouter>
                 <NavBar/>
           <Switch>
-              <Route path="/detalle-del-producto">
-                  <ItemDetail/> 
+              <Route path="/item/:id">
+                  <ItemDetailContainer/> 
               </Route> 
               <Route path="/bikes">
                   <ItemListContainer/>

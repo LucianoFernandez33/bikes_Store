@@ -16,7 +16,7 @@ const ItemList = ({productos}) =>{
             <div className="catalogo">
                 {productos.map((arrayItems)=>
                 <div key={arrayItems.id} className="container-card">
-                    <Item img={arrayItems.img} tittle={arrayItems.tittle} description= {arrayItems.description} price={arrayItems.price} stock= {arrayItems.stock}/>
+                    <Item img={arrayItems.img} tittle={arrayItems.tittle} description= {arrayItems.description} price={arrayItems.price} stock= {arrayItems.stockTotal}/>
                 </div>
             )}
             </div>

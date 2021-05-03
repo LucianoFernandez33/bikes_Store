@@ -32,10 +32,10 @@ export const ItemListContainer = () => {
       },
       {
          img: "./venzo.jpg",
-         description: "Cuadro Venzo Skiline Evo r-29, Aluminio 6061",
+         description: "Cuadro Venzo Skiline Evo r-29",
          tittle: "SKILINE EVO Shadow Series",
          price: "55000",
-         stockTotal: 6,
+         stockTotal: 10,
          marca: "VENZO",
          category: "bicicletas",
          id: 3
@@ -45,7 +45,7 @@ export const ItemListContainer = () => {
          description: "R29 - 2x10v - Full Shimano Deore",
          tittle: "Venzo Atix - 2x10v",
          price:" 140000",
-         stockTotal: 6,
+         stockTotal: 8,
          marca: "VENZO",
          category: "bicicletas",
          id: 4
@@ -65,7 +65,7 @@ export const ItemListContainer = () => {
          description: "R29 - 3x8 - Shimano Altus, frenos a disco hidráulicos",
          tittle: "Venzo RAPTOR EVO",
          price:" 130000",
-         stockTotal: 6,
+         stockTotal: 7,
          marca: "VENZO",
          category: "bicicletas",
          id: 6
@@ -75,7 +75,7 @@ export const ItemListContainer = () => {
          description: "R29 - XR 3.5 - Bicicleta MountainBike de Aluminio Rodado 29, Frenos a Disco, Suspensión C/Bloqueo, Llantas Doble Pared, Full Shimano.",
          tittle: "Nueva VAIRO XR 3.5 2021",
          price:" 130000",
-         stockTotal: 6,
+         stockTotal: 3,
          marca: "VAIRO",
          category: "bicicletas",
          id: 7
@@ -85,7 +85,7 @@ export const ItemListContainer = () => {
          description: "R29 - 3x8 - Freno a Disco Shimano / Tektro",
          tittle: "Nueva VAIRO XR 3.8 29",
          price:" 130000",
-         stockTotal: 6,
+         stockTotal: 2,
          marca: "VAIRO",
          category: "bicicletas",
          id: 8
@@ -95,7 +95,7 @@ export const ItemListContainer = () => {
          description: "R29 - XR 5.0 - Aluminio 6061T6,Freno A disco, Hidráulico – Shimano/Tektro",
          tittle: "Nueva VAIRO 5.0",
          price:" 150000",
-         stockTotal: 6,
+         stockTotal: 1,
          marca: "VAIRO",
          category: "bicicletas",
          id: 9
@@ -105,7 +105,7 @@ export const ItemListContainer = () => {
          description: "Con regulación y vicera - Talles M / L - Colores: negro/rojo, negro/verde, negro/azul",
          tittle: "Casco Modelo 017",
          price:" 5000",
-         stockTotal: 6,
+         stockTotal: 5,
          marca: "VENZO",
          category: "accesorios",
          id: 10
@@ -115,7 +115,7 @@ export const ItemListContainer = () => {
          description: "Con regulación y vicera - Talles M / L - Colores: negro/rojo, negro/verde, negro/azul",
          tittle: "Casco Modelo 010",
          price:" 5500",
-         stockTotal: 6,
+         stockTotal: 5,
          marca: "VENZO",
          category: "accesorios",
          id: 11
@@ -135,7 +135,7 @@ export const ItemListContainer = () => {
          description: "5 luces led - 3 funciones- Modo de carga 2 pillas AAA",
          tittle: "Baliza VENZO 001-008",
          price:" 3500",
-         stockTotal: 6,
+         stockTotal: 3,
          marca: "VENZO",
          category: "accesorios",
          id: 13
@@ -145,7 +145,7 @@ export const ItemListContainer = () => {
          description: "1 luz led - 3 funciones - Carcaza de aluminio - Resistente a la lluvia",
          tittle: "Farol delantero VENZO F01-006",
          price:" 5500",
-         stockTotal: 6,
+         stockTotal: 2,
          marca: "VENZO",
          category: "accesorios",
          id: 14
@@ -165,7 +165,7 @@ export const ItemListContainer = () => {
          description: "Dedos cortos - Con abrojo y almohadillas - Talles S/M/L/XL",
          tittle: "Guantes modelo 003",
          price:" 6000",
-         stockTotal: 6,
+         stockTotal: 10,
          marca: "VENZO",
          category: "accesorios",
          id: 16

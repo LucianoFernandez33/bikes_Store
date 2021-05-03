@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
                         description: "SPY BULLET 29 ALUMINIO 6061",
                         tittle: "SPY BULLET",
                         price: "50000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "SPY",
                         category: "bicicletas"
                     },
@@ -28,17 +28,17 @@ const ItemDetailContainer = () => {
                         description: "SPY BULLET 29 ALUMINIO 6061",
                         tittle: "SPY BULLET 29 24v. MEC DISC",
                         price:" 55000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "SPY",
                         category: "bicicletas"
                     },
                     {
                         id: 3, 
                         img: "../venzo.jpg",
-                        description: "Cuadro Venzo Skiline Evo r-29, Aluminio 6061",
+                        description: "Cuadro Venzo Skiline Evo r-29",
                         tittle: "SKILINE EVO Shadow Series",
                         price: "55000",
-                        stock: 6,
+                        stockTotal: 10,
                         marca: "VENZO",
                         category: "bicicletas"
                     },
@@ -48,7 +48,7 @@ const ItemDetailContainer = () => {
                         description: "R29 - 2x10v - Full Shimano Deore",
                         tittle: "Venzo Atix - 2x10v",
                         price:" 140000",
-                        stock: 6,
+                        stockTotal: 8,
                         marca: "VENZO",
                         category: "bicicletas"
                     },
@@ -58,7 +58,7 @@ const ItemDetailContainer = () => {
                         description: "R29 - 3x8 - 24v, Shimano Altus, frenos a disco hidráulicos",
                         tittle: "Venzo PRIMAL XC Shadow",
                         price:" 75000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "VENZO",
                         category: "bicicletas"
                     },
@@ -68,7 +68,7 @@ const ItemDetailContainer = () => {
                         description: "R29 - 3x8 - Shimano Altus, frenos a disco hidráulicos",
                         tittle: "Venzo RAPTOR EVO",
                         price:" 130000",
-                        stock: 6,
+                        stockTotal: 7,
                         marca: "VENZO",
                         category: "bicicletas"
                     },
@@ -78,7 +78,7 @@ const ItemDetailContainer = () => {
                         description: "R29 - XR 3.5 - Bicicleta MountainBike de Aluminio Rodado 29, Frenos a Disco, Suspensión C/Bloqueo, Llantas Doble Pared, Full Shimano.",
                         tittle: "Nueva VAIRO XR 3.5 2021",
                         price:" 130000",
-                        stock: 6,
+                        stockTotal: 3,
                         marca: "VAIRO",
                         category: "bicicletas"
                     },
@@ -88,7 +88,7 @@ const ItemDetailContainer = () => {
                         description: "R29 - 3x8 - Freno a Disco Shimano / Tektro",
                         tittle: "Nueva VAIRO XR 3.8 29",
                         price:" 130000",
-                        stock: 6,
+                        stockTotal: 2,
                         marca: "VAIRO",
                         category: "bicicletas"
                     },
@@ -98,7 +98,7 @@ const ItemDetailContainer = () => {
                         description: "R29 - XR 5.0 - Aluminio 6061T6,Freno A disco, Hidráulico – Shimano/Tektro",
                         tittle: "Nueva VAIRO 5.0",
                         price:" 150000",
-                        stock: 6,
+                        stockTotal: 1,
                         marca: "VAIRO",
                         category: "bicicletas"
                     },
@@ -108,7 +108,7 @@ const ItemDetailContainer = () => {
                         description: "Con regulación y vicera - Talles M / L - Colores: negro/rojo, negro/verde, negro/azul",
                         tittle: "Casco Modelo 017",
                         price:" 5000",
-                        stock: 6,
+                        stockTotal: 5,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -118,7 +118,7 @@ const ItemDetailContainer = () => {
                         description: "Con regulación y vicera - Talles M / L - Colores: negro/rojo, negro/verde, negro/azul",
                         tittle: "Casco Modelo 010",
                         price:" 5500",
-                        stock: 6,
+                        stockTotal: 5,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -128,7 +128,7 @@ const ItemDetailContainer = () => {
                         description: "Rieles cuero sintetico - Tamaño 270 x 145 mm",
                         tittle: "Asiento VENZO MX",
                         price:" 6000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -138,7 +138,7 @@ const ItemDetailContainer = () => {
                         description: "5 luces led - 3 funciones- Modo de carga 2 pillas AAA",
                         tittle: "Baliza VENZO 001-008",
                         price:" 3500",
-                        stock: 6,
+                        stockTotal: 3,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -148,7 +148,7 @@ const ItemDetailContainer = () => {
                         description: "1 luz led - 3 funciones - Carcaza de aluminio - Resistente a la lluvia",
                         tittle: "Farol delantero VENZO F01-006",
                         price:" 5500",
-                        stock: 6,
+                        stockTotal: 2,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -158,7 +158,7 @@ const ItemDetailContainer = () => {
                         description: "Largo 128 mm",
                         tittle: "Puños VENZO de goma espuma E05-",
                         price:" 2500",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -168,7 +168,7 @@ const ItemDetailContainer = () => {
                         description: "Dedos cortos - Con abrojo y almohadillas - Talles S/M/L/XL",
                         tittle: "Guantes modelo 003",
                         price:" 6000",
-                        stock: 6,
+                        stockTotal: 10,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -178,7 +178,7 @@ const ItemDetailContainer = () => {
                         description: "Dedos largos - Con abrojo y almohadillas - Talles S/M/L/XL",
                         tittle: "Guantes modelo 001",
                         price:" 150000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "VENZO",
                         category: "accesorios"
                     }, 
@@ -188,7 +188,7 @@ const ItemDetailContainer = () => {
                         description: "2 lentes cambiables - Proteccion UV",
                         tittle: "Lentes modelo 001",
                         price:" 8000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -198,7 +198,7 @@ const ItemDetailContainer = () => {
                         description: "2 lentes cambiables - Proteccion UV",
                         tittle: "Lentes modelo 002",
                         price:" 8000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -208,7 +208,7 @@ const ItemDetailContainer = () => {
                         description: "Lllaves allen medidas 2/2.5/3/4/5/6/8 - Saca cubiertas - Llaves de tubo 8/9/10/12",
                         tittle: "Herramienta VENZO F33 002-13 funciones",
                         price:" 4000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "VENZO",
                         category: "accesorios"
                     },
@@ -218,7 +218,7 @@ const ItemDetailContainer = () => {
                         description: "Material fibra de carbono - Diametro 31.6 - Longitud 350mm",
                         tittle: "Portasilla VENZO XTV",
                         price:" 7000",
-                        stock: 6,
+                        stockTotal: 6,
                         marca: "VENZO",
                         category: "accesorios"
                     } 
@@ -233,16 +233,12 @@ const ItemDetailContainer = () => {
 
     getItem().then(dato =>{
         const itemFilter = dato.filter(item => item.id == id)
-        console.log(dato)
-        console.log(id)
         console.log(itemFilter)
         setDatos(itemFilter)}
     )
      
  },[]);
 
- console.log(datos[0])
- console.log(datos.length)
  return(
         <div>
             {datos.length > 0  ? <ItemDetail datos={datos[0]}/> : 

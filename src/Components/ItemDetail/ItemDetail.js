@@ -1,11 +1,11 @@
 import React from 'react';
-import "./ItemDetail.css"
-import spy from '../../Assets/spy.jpg'
-import ItemCount from '../ItemCount/ItemCount'
+import "./ItemDetail.css";
+import spy from '../../Assets/spy.jpg';
+import ItemCountContainer from '../ItemCountContainer/ItemCountContainer';
 
 // Aca muestro la descripcion del producto que el usuario elige al hacer click en VER CARACTERISTICAS
 
-const ItemDetail = ({datos}) =>{
+const ItemDetail = ({datos, id}) =>{
    
     console.log(datos)
     
@@ -30,7 +30,7 @@ const ItemDetail = ({datos}) =>{
                     </div>
             </div>   
             <div>
-                <ItemCount stock={datos.stock}/>
+                <ItemCountContainer id={id} stock={datos.stockTot}/>
             </div>
         </div> 
     

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 .container-productos {
         background-color: #efefef;
         margin: 0px 70px;
@@ -10,8 +12,10 @@
     color: rgb(65, 62, 62);
 }
 .container-tit {
-    font-size: 6vh;
-    color: royalblue;
+    font-family: 'Indie Flower', cursive;
+    font-size: 7vh;
+    font-weight: 600;
+    color: #2d597a;
     margin: 10px 0px;
 }
 .container-card {
@@ -27,5 +31,10 @@
     .container-productos {
         background-color: #efefef;
         margin: 0px;
+    }
+    .container-tit {
+        font-size: 4vh;
+        color: #2d597a;
+        margin: 10px 0px;
     }
 }

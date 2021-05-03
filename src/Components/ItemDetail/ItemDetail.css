@@ -12,17 +12,23 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 80%;
-    margin: 20px 10px 0px;
+    align-items: center;
+    width: 70%;
+    height: 60vh;
+    margin: 10px 10px 0px;
     padding: 15px;
     background-color: black;
+    overflow: hidden;
 }
 .container-card-img-itemDetail {
-    width: 100%;
+    width: 60%;
     padding: 2px;
+    overflow: hidden;
+
 }
 .container-card-img-itemDetail img {
     width: 95%;
+    position: relative;
 }
 .container-card-body-itemDetail {
     width: 50%;
@@ -46,4 +52,48 @@
     background-color: darkgray;
     color:rgb(239, 247, 240);
     font-size: 15px;
+}
+.container-itemDetail-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.img-itemDetail {
+    width: 100%;
+    position: relative;
+    bottom: 53vh;
+}
+
+@media (max-width:480px) {
+    .img-itemDetail {
+        width: 100%;
+        position: relative;
+        bottom: 0vh;
+    }
+    .container-card-itemDetail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        margin: 10px 10px 0px;
+        padding: 10px;
+        background-color: black;
+        height: auto;
+    }
+    .container-card-img-itemDetail {
+        width: 100%;
+        padding: 2px;
+        overflow: hidden;
+    }
+    .container-card-body-itemDetail {
+        width: 100%;
+        background-color: cadetblue;
+        padding-left: 10px;
+        font-size: 12px;
+       
+    }
+    .container-card-img-itemDetail img {
+        width: 100%;
+        position: relative;
+    }
 }

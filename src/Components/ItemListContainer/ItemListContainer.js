@@ -11,32 +11,32 @@ export const ItemListContainer = () => {
       const listas = new Promise((resolve, reject)=>{
       const catalogo = [
       {
+         img: "./spy-bullet.png",
+         description: "SPY BULLET 29 ALUMINIO 6061",
+         tittle: "SPY BULLET",
+         price: "50000",
+         stockTotal: 6,
+         marca: "SPY",
+         category: "bicicletas",
+         id: 1
+      },
+      {
+         img: "./spy-bullet-24v.png",
+         description: "SPY BULLET 29 ALUMINIO 6061",
+         tittle: "SPY BULLET 29 24v. MEC DISC",
+         price:" 55000",
+         stockTotal: 6,
+         marca: "SPY",
+         category: "bicicletas",
+         id: 2
+      },
+      {
          img: "./venzo.jpg",
          description: "Cuadro Venzo Skiline Evo r-29, Aluminio 6061",
          tittle: "SKILINE EVO Shadow Series",
          price: "55000",
          stockTotal: 6,
          marca: "VENZO",
-         category: "bicicletas",
-         id: 1 
-      },
-      {
-         img: "./firebird.jpg",
-         description: "Nueva Firebird R29 Coyote 21V Shimano",
-         tittle: "Firebird Coyote ",
-         price: "50000",
-         stockTotal: 6,
-         marca: "FIREBIRD",
-         category: "bicicletas",
-         id: 2
-      },
-      {
-         img: "./raleigh.jpg",
-         description: "Nueva Raleight R29 Mojave 2.0 cuadro aluminio",
-         tittle: "Raleight Mojave 2.0",
-         price:" 50000",
-         stockTotal: 6,
-         marca: "RALEIGH",
          category: "bicicletas",
          id: 3
       },

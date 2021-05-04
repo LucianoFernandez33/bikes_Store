@@ -65,6 +65,9 @@
     position: relative;
     bottom: 53vh;
 }
+.container-counter-itemDetail {
+    color: white;
+}
 
 @media (max-width:780px) {
     .img-itemDetail {

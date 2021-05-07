@@ -2,9 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Carousel, Container, Image, Row, Col} from 'react-bootstrap';
 import './Home.css';
-import carousel04 from '../../Assets/carousel04.jpg';
-import carousel05 from '../../Assets/carousel05.jpg';
-import carousel06 from '../../Assets/carousel06.jpg';
+import carousel04 from '../../Assets/carousel04.png';
+import carousel08 from '../../Assets/carousel08.jpg';
+import carousel07 from '../../Assets/carousel07.jpg';
 
 const Home = () =>{
 
@@ -22,14 +22,14 @@ const Home = () =>{
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src={carousel05}
+                        src={carousel08}
                         alt="Second slide"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src={carousel06}
+                        src={carousel07}
                         alt="Third slide"
                         />
                     </Carousel.Item>

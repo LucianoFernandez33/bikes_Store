@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
 .container-productos {
         background-color: #efefef;
@@ -12,7 +12,7 @@
     color: rgb(65, 62, 62);
 }
 .container-tit {
-    font-family: 'Indie Flower', cursive;
+    font-family: 'New Tegomin', serif;
     font-size: 7vh;
     font-weight: 600;
     color: #2d597a;

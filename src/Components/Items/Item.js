@@ -5,7 +5,7 @@ import {Card, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ItemCountContainer from '../ItemCountContainer/ItemCountContainer';
 
-const Item = ({img, description, tittle, price, stockTotal, id}) =>{
+const Item = ({img, description, tittle, price, stockTotal, id, descriptionTwo, descriptionThree, sizes}) =>{
     
     return (
         <div className="container-card-child">
@@ -15,9 +15,9 @@ const Item = ({img, description, tittle, price, stockTotal, id}) =>{
                 </div>
                 <Card.Body>
                     <Card.Title>{tittle}</Card.Title>
-                    <Card.Text>{description}</Card.Text>
+                    <Card.Text className="line-sizes">{sizes}</Card.Text>
                     <Card.Text> $ {price}</Card.Text>
-                    <Link to={`/item/${id}`}>
+                    <Link className="button-link" to={`/item/${id}`}>
                         <Button className="button-Caraterist">Ver Caracteristicas</Button>
                     </Link>
                 </Card.Body>

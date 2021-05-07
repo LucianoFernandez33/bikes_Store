@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 .container-img-card {
     height: 215px;
     padding: 3px;
@@ -10,7 +11,15 @@
     align-items: center;
     border: 1px solid darkgray;
     background-color: darkgray;
-    color: blue;
+    color: white;
+}
+.button-Caraterist:hover {
+    background-color: tomato;
+    text-decoration: none;
+    border: none;
+}
+.button-link:hover{
+    text-decoration: none;
 }
 .card-body {
     display: flex;
@@ -18,4 +27,9 @@
     justify-content: center;
     align-self: center;
     align-items: center;
+    font-family: 'New Tegomin', serif;
+    font-weight: 700;
+}
+.line-sizes {
+    font-size: 11px;
 }

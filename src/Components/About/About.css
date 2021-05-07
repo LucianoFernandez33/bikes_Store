@@ -1,0 +1,30 @@
+.container-card-one {
+    border: none;
+}
+.container-card-two {
+    margin: 0px 70px;
+    position: relative;
+    bottom: 150px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+}
+.container-card-two img {
+    width: 70%;
+}
+
+@media (max-width:600px) {
+    .container-about {
+       font-size: 12px;
+    }
+    .container-card-two {
+        margin: 0px 5px;
+        position: relative;
+        bottom: 45px;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 20px;
+    }
+}

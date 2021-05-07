@@ -1,0 +1,25 @@
+.container-gallery {
+    background-color: #efefef;
+    margin: 0px 70px;
+}
+.container-child {
+    margin: 0px;
+    border-radius: 0px;
+    overflow: hidden;
+    border: none;
+}
+.container-gallery-child {
+    display: flex;
+    margin: 0px 0px 10px;
+}
+.container-gallery img {
+    border: none;
+    border-radius: 0px;
+}
+
+@media (max-width:480px) {
+    .container-gallery {
+        background-color: #efefef;
+        margin: 0px;
+    }
+}

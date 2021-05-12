@@ -10,7 +10,7 @@ const ItemList = ({productos}) =>{
         
         <div className="container-productos">
             <div className="container-img-catalogo">
-                <Image className="img-catalogo" src="./fondoBikes.jpg" fluid />
+                <Image className="img-catalogo" src="../fondoBikes.jpg" fluid />
             </div>
             <div className="container-tit">CATÁLOGO DE PRODUCTOS</div>
             <div className="catalogo">

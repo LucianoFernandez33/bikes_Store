@@ -1,0 +1,14 @@
+.container-cart {
+    
+    display: flex;
+    justify-content: center;
+    background-color: #efefef;
+    margin: 0px 70px;
+}
+.container-child {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.imag-cart {
+    width: 300px;
+}

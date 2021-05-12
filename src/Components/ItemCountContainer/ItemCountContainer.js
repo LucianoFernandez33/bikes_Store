@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
+
 
 const ItemCountContainer = ({id, stockTotal}) => {
 
@@ -7,6 +8,7 @@ const ItemCountContainer = ({id, stockTotal}) => {
     const [stockUsser, setStockUsser] = useState(0);
     const [compra, setCompra] = useState(0);
     const [buttonActive, setButtonActive] = useState (true);
+    
 
     const sumar = () => {
         if (stockTot === 0) {
@@ -30,8 +32,13 @@ const ItemCountContainer = ({id, stockTotal}) => {
         }
     }
     const onAdd = () =>{
-        setCompra(stockUsser);
-        alert (`USTED A COMPRADO ${stockUsser} UNIDADES!`)
+        if (stockUsser === 0) {
+            alert (`Debe elegir al menos una unidad para agregar al carrito`)
+        }else {
+            setCompra(stockUsser);
+            alert (`USTED A COMPRADO ${stockUsser} UNIDADES!`)
+            console.log(stockUsser)
+        }
     }
 
     return (

@@ -7,14 +7,16 @@ const ItemCart = ()=>{
 
     const [cart, setCart] = useContext(CartContext)
     console.log("carrito", cart)
-
-    //cart.forEach(element => {
-    //    console.log(element.id)
-    //});
+    
+    
+    cart.forEach(element => {
+        console.log(element.id)
+    });
 
     return(
         <div className="container-cart">
-            <Card className="container-child">
+            <h1>TU CARRITO DE COMPRAS</h1>
+            <Card className="container-child-cartShop">
                 <Card.Img className="imag-cart" variant="top" src="../spy-bullet.png" />
                 <Card.Body>
                     <Card.Title>Card Title</Card.Title>

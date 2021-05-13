@@ -1,8 +1,8 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
 import gallery01 from '../../Assets/gallery01.jpg';
-import gallery02 from '../../Assets/gallery02.jpg';
-import gallery04 from '../../Assets/gallery04.jpg';
+//import gallery02 from '../../Assets/gallery02.jpg';
+//import gallery04 from '../../Assets/gallery04.jpg';
 
 import './Gallery.css';
 const Gallery = () => {
@@ -18,8 +18,8 @@ const Gallery = () => {
                         </Card.Text>
                         <Card.Text> </Card.Text>
                     </Card.ImgOverlay>
-            </Card>
-            <div className="container-gallery-child">
+            </Card> 
+            {/*<div className="container-gallery-child">
                 <Card className="bg-dark text-white container-child">
                     <Card.Img src={gallery02} alt="Card image" />
                         <Card.ImgOverlay>
@@ -40,7 +40,7 @@ const Gallery = () => {
                             <Card.Text> </Card.Text>
                         </Card.ImgOverlay>
                 </Card>
-            </div>
+            </div>*/}
             
         </div>
     )

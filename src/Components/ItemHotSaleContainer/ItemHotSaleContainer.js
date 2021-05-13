@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "../ItemList/ItemList";
+import ItemHotSale from "../ItemHotSale/ItemHotSale";
 import './ItemHotSaleContainer.css'
 import {Spinner} from 'react-bootstrap';
 import { useParams } from "react-router";
@@ -308,7 +308,7 @@ export const ItemHotSaleContainer = () => {
    
 return(
   <div className="container-products">
-     {datos.length > 0 ? <ItemList productos={datos}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
+     {datos.length > 0 ? <ItemHotSale productos={datos}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
   </div>
 )
       

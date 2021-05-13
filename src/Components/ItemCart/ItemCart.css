@@ -1,13 +1,14 @@
 .container-cart {
-    
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: #efefef;
     margin: 0px 70px;
 }
-.container-child {
+.container-child-cartShop {
     display: flex;
     flex-direction: row-reverse;
+    margin: 10px 70px;
 }
 .imag-cart {
     width: 300px;

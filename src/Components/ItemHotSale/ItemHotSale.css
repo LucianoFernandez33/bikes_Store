@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+.container-productos-HotSale {
+        background-color: #69f048;
+        margin: 0px 70px;
+}
+.catalogo-HotSale {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: rgb(65, 62, 62);
+}
+.container-tit-HotSale h2 {
+    font-family: 'New Tegomin', serif;
+    font-size: 7vh;
+    font-weight: 600;
+    color: #e61e17;
+    margin: 10px 0px;
+}
+.container-tit-HotSale p {
+    font-family: 'New Tegomin', serif;
+    font-size: 3vh;
+    font-weight: 200;
+    color: #1026f1;
+    margin: 10px 0px;
+}
+.container-card-HotSale {
+    margin: 20px 0px;
+}
+.container-img-catalogo {
+    width: 100%;
+}
+.img-catalogo {
+    width: 100%;
+}
+@media (max-width:480px) {
+    .container-productos-HotSale {
+        background-color: #efefef;
+        margin: 0px;
+    }
+    .container-tit-HotSale {
+        font-size: 4vh;
+        color: #2d597a;
+        margin: 10px 0px;
+    }
+}

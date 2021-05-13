@@ -297,9 +297,9 @@ const ItemDetailContainer = () => {
     getItem().then(dato =>{
         const itemFilter = dato.filter(item => item.id == id)
         console.log(itemFilter)
-        setDatos(itemFilter)}
+        setDatos(itemFilter)
+    }
     )
-     
  },[]);
 
  return(

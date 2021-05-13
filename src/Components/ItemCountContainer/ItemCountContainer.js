@@ -1,13 +1,15 @@
-import React, {useContext, useState} from 'react';
+import React, { useState, useContext} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
-
+import {CartContext} from "../../Context/CartContext";
 
 const ItemCountContainer = ({id, stockTotal}) => {
-
+    
+    const [cart, setCart] = useContext(CartContext)
     const [stockTot, setStockTot] = useState(stockTotal);
     const [stockUsser, setStockUsser] = useState(0);
     const [compra, setCompra] = useState(0);
     const [buttonActive, setButtonActive] = useState (true);
+    
     
 
     const sumar = () => {
@@ -36,8 +38,10 @@ const ItemCountContainer = ({id, stockTotal}) => {
             alert (`Debe elegir al menos una unidad para agregar al carrito`)
         }else {
             setCompra(stockUsser);
-            alert (`USTED A COMPRADO ${stockUsser} UNIDADES!`)
-            console.log(stockUsser)
+            setCart([...cart,{id,"cantidad":stockUsser}])
+            //alert (`USTED A COMPRADO ${stockUsser} UNIDADES!`)
+            
+            
         }
     }
 

@@ -5,7 +5,7 @@ import ItemCountContainer from '../ItemCountContainer/ItemCountContainer';
 
 // Aca muestro la descripcion del producto que el usuario elige al hacer click en VER CARACTERISTICAS
 
-const ItemDetail = ({datos, id, stockTotal}) =>{
+const ItemDetail = ({datos, id}) =>{
    
     console.log(datos)
     

@@ -1,9 +1,16 @@
-import React from "react";
-import './Cart.css'
+import React, {useContext, useEffect} from "react";
+import './ItemCart.css'
 import {Card, Button} from 'react-bootstrap';
+import {CartContext} from "../../Context/CartContext";
 
-const Cart = ()=>{
+const ItemCart = ()=>{
 
+    const [cart, setCart] = useContext(CartContext)
+    console.log("carrito", cart)
+
+    //cart.forEach(element => {
+    //    console.log(element.id)
+    //});
 
     return(
         <div className="container-cart">
@@ -20,4 +27,4 @@ const Cart = ()=>{
     )
 }
 
-export default Cart;
+export default ItemCart;

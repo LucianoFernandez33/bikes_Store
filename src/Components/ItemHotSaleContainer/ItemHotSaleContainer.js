@@ -1,16 +1,15 @@
-import React, { useState, useEffect, useContext} from "react";
+import React, { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
-import './ItemListContainer.css'
+import './ItemHotSaleContainer.css'
 import {Spinner} from 'react-bootstrap';
 import { useParams } from "react-router";
-import {CartContext} from "../../Context/CartContext";
 
-export const ItemListContainer = () => {
+export const ItemHotSaleContainer = () => {
    
-   const [cart, setCart] = useContext(CartContext)
    const [datos, setDatos] = useState([])
-   const {id} = useParams();
-   
+   const {price} = useParams();
+   const hotPrice = { min: 40000, max:65000 }
+
    useEffect(()=>{
       const listas = new Promise((resolve, reject)=>{
       const catalogo = [
@@ -21,7 +20,7 @@ export const ItemListContainer = () => {
             descriptionThree: "CAMBIO SHIMANO RD-TY300 - DESCARRILADOR SHIMANO FD-TY500",
             sizes: "TALLES: 16 - 18 - 20",
             tittle: "SPY BULLET 29 ALUMINIO 6061T 21v.",
-            price: "50000",
+            price: 50000,
             stockTotal: 6,
             marca: "SPY",
             category: "bikes",
@@ -34,7 +33,7 @@ export const ItemListContainer = () => {
             descriptionThree: "CAMBIO SHIMANO RD-M310 - DESCARRILADOR SHIMANO FD-TY700",
             sizes: "TALLES: 16 - 18 - 20",
             tittle: "SPY BULLET 29 ALUMINIO 6061 24v.",
-            price:" 55000",
+            price: 45000,
             stockTotal: 6,
             marca: "SPY",
             category: "bikes",
@@ -47,7 +46,7 @@ export const ItemListContainer = () => {
             descriptionThree: "21v. CON CAMBIO, DESCARRILADOR Y MANIJAS SHIMANO",
             sizes: "TALLES: 14(XS), 16(S), 18(M), 20(L), 22(XL)",
             tittle: "Venzo Loki Evo - Shadow Series",
-            price: "55000",
+            price: 52000,
             stockTotal: 10,
             marca: "VENZO",
             category: "bikes",
@@ -60,7 +59,7 @@ export const ItemListContainer = () => {
             descriptionThree: "CUADRO DE ALUMINIO 7005 - SUSPENSION CON BLOQUEO Y REGULACIÓN",
             sizes: "TALLES: 14(XS), 16(S), 18(M), 20(L), 22(XL)",
             tittle: "VENZO ATIX - 2x10v",
-            price:" 140000",
+            price: 85000,
             stockTotal: 8,
             marca: "VENZO",
             category: "bikes",
@@ -73,7 +72,7 @@ export const ItemListContainer = () => {
             descriptionThree: "CUADRO DE ALUMINIO 6061 - SUSPENSION CON BLOQUEO Y REGULACIÓN",
             sizes: "TALLES: 14(XS), 16(S), 18(M), 20(L)",
             tittle: "Venzo PRIMAL XC Shadow R29",
-            price:" 75000",
+            price: 75000,
             stockTotal: 6,
             marca: "VENZO",
             category: "bikes",
@@ -86,7 +85,7 @@ export const ItemListContainer = () => {
             descriptionThree: "CUADRO DE ALUMINIO 6061 - SUSPENSION CON BLOQUEO Y REGULACIÓN",
             sizes: "TALLES: 14(XS), 16(S), 18(M), 20(L)",
             tittle: "Venzo RAPTOR EVO R29",
-            price:" 130000",
+            price: 130000,
             stockTotal: 7,
             marca: "VENZO",
             category: "bikes",
@@ -99,7 +98,7 @@ export const ItemListContainer = () => {
             descriptionThree: "DESCARRILADOR DELANTERO SHIMANO 31.8 42T",
             sizes: "TALLES: 16(S), 18(M), 20(L) 22(XL)",
             tittle: "Nueva VAIRO XR 3.5 2021 ALLOY R29",
-            price:" 130000",
+            price: 130000,
             stockTotal: 3,
             marca: "VAIRO",
             category: "bikes",
@@ -112,7 +111,7 @@ export const ItemListContainer = () => {
             descriptionThree: "DESCARRILADOR DELANTERO SHIMANO 34.9 42T",
             sizes: "TALLES: 14(XS), 16(S), 18(M), 20(L)",
             tittle: "VAIRO XR 3.8 29er ALLOY 6061",
-            price:" 130000",
+            price: 130000,
             stockTotal: 2,
             marca: "VAIRO",
             category: "bikes",
@@ -125,7 +124,7 @@ export const ItemListContainer = () => {
             descriptionThree: "DESCARRILADOR DELANTERO SHIMANO DEORE 2*10",
             sizes: "TALLES: 16(S), 18(M), 20(L), 22(XL)",
             tittle: "VAIRO XR 5.0 R29",
-            price:" 150000",
+            price: 150000,
             stockTotal: 1,
             marca: "VAIRO",
             category: "bikes",
@@ -138,7 +137,7 @@ export const ItemListContainer = () => {
             descriptionThree: "COLORES: NEGRO/ROJO - NEGRO/VERDE - NEGRO/AZUL",
             sizes: "TALLES: M - L",
             tittle: "CASCO VENZO",
-            price:" 5000",
+            price: 5000,
             stockTotal: 5,
             marca: "VENZO",
             category: "accessories",
@@ -151,7 +150,7 @@ export const ItemListContainer = () => {
             descriptionThree: "COLORES: NEGRO/ROJO - NEGRO/VERDE - NEGRO/AZUL",
             sizes: "TALLES: M - L",
             tittle: "CASCO VENZO",
-            price:" 5500",
+            price: 5500,
             stockTotal: 5,
             marca: "VENZO",
             category: "accessories",
@@ -164,7 +163,7 @@ export const ItemListContainer = () => {
             descriptionThree: "SOPORTE DE ACERO - PESO: 290grs",
             sizes: "TALLES: UNIVERSAL",
             tittle: "ASIENTO VENZO MX",
-            price:" 6000",
+            price: 6000,
             stockTotal: 6,
             marca: "VENZO",
             category: "accessories",
@@ -177,7 +176,7 @@ export const ItemListContainer = () => {
             descriptionThree: "MODO DE CARGA: 2 PILAS AAA",
             sizes: "TALLES: UNIVERSAL",
             tittle: "BALIZA VENZO",
-            price:" 3500",
+            price: 3500,
             stockTotal: 3,
             marca: "VENZO",
             category: "accessories",
@@ -190,7 +189,7 @@ export const ItemListContainer = () => {
             descriptionThree: "CARCAZA DE ALUMINIO RESISTENTE A LA LLUVIA",
             sizes: "TALLES: UNIVERSAL",
             tittle: "FAROL DELANTERO VENZO",
-            price:" 5500",
+            price: 5500,
             stockTotal: 2,
             marca: "VENZO",
             category: "accessories",
@@ -203,7 +202,7 @@ export const ItemListContainer = () => {
             descriptionThree: "LARGO: 128mm",
             sizes: "TALLES: UNIVERSAL",
             tittle: "PUÑOS VENZO",
-            price:" 2500",
+            price: 2500,
             stockTotal: 6,
             marca: "VENZO",
             category: "accessories",
@@ -216,7 +215,7 @@ export const ItemListContainer = () => {
             descriptionThree: "CON ABROJO Y ALMOHADILLAS",
             sizes: "TALLES: S - M - L - XL",
             tittle: "GUANTES VENZO",
-            price:" 6000",
+            price: 6000,
             stockTotal: 10,
             marca: "VENZO",
             category: "accessories",
@@ -229,7 +228,7 @@ export const ItemListContainer = () => {
             descriptionThree: "CON ABROJO Y ALMOHADILLAS",
             sizes: "TALLES: S - M - L - XL",
             tittle: "GUANTES VENZO",
-            price:" 150000",
+            price: 150000,
             stockTotal: 6,
             marca: "VENZO",
             category: "accessories",
@@ -242,7 +241,7 @@ export const ItemListContainer = () => {
             descriptionThree: "INCLUYE ESTUCHE",
             sizes: "COLORES: NEGRO, AZUL, ROJO, BLANCO",
             tittle: "LENTES",
-            price:" 8000",
+            price: 8000,
             stockTotal: 6,
             marca: "VENZO",
             category: "accessories",
@@ -255,7 +254,7 @@ export const ItemListContainer = () => {
             descriptionThree: "INCLUYE ESTUCHE",
             sizes: "COLORES: NEGRO, AZUL, ROJO, BLANCO",
             tittle: "LENTES",
-            price:" 8000",
+            price: 8000,
             stockTotal: 6,
             marca: "VENZO",
             category: "accessories",
@@ -268,7 +267,7 @@ export const ItemListContainer = () => {
             descriptionThree: "SACA CUBIERTAS - LLAVES DE TUBO 8/9/10/12",
             sizes: "3 TUBOS - 2 TIPOS DE DESTORNILLADORES",
             tittle: "HERRAMIENTA VENZO",
-            price:" 4000",
+            price: 4000,
             stockTotal: 6,
             marca: "VENZO",
             category: "accessories",
@@ -281,7 +280,7 @@ export const ItemListContainer = () => {
             descriptionThree: "PESO: 213grs",
             sizes: "COLORES: NEGRO, AZUL, ROJO, BLANCO",
             tittle: "PORTASILLA VENZO XTV",
-            price:" 7000",
+            price: 7000,
             stockTotal: 6,
             marca: "VENZO",
             category: "accessories",
@@ -294,12 +293,10 @@ export const ItemListContainer = () => {
          })
    
    listas.then((res)=>{
-      const NCategory = res.filter(x=>x.category === `${id}`);
-      if (id === undefined) {
-         setDatos(res)
-      }else {
-         setDatos(NCategory)
-      }
+      console.log(res)
+      const hotSale = res.filter(x=>x.price >= hotPrice.min && x.price <= hotPrice.max);
+      console.log(hotSale)
+      setDatos(hotSale)
    })
    .catch(()=>{
       console.log("Hubo problemas al cargar")
@@ -307,7 +304,7 @@ export const ItemListContainer = () => {
    .finally(()=>{
       console.log("Control finalizado")
    })
-},[id]);
+},[price]);
    
 return(
   <div className="container-products">
@@ -317,5 +314,4 @@ return(
       
    }
    
-export default ItemListContainer;
-    
+export default ItemHotSaleContainer;

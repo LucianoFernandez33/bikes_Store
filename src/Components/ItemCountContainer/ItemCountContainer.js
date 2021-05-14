@@ -8,7 +8,6 @@ const ItemCountContainer = ({datos, onAdd}) => {
     const [stockTot, setStockTot] = useState(datos.stockTotal);
     const [stockUsser, setStockUsser] = useState(0);
     const [compra, setCompra] = useState(0);
-    const [buttonActive, setButtonActive] = useState (true);
     
     useEffect(() => {
         
@@ -16,13 +15,7 @@ const ItemCountContainer = ({datos, onAdd}) => {
     
 
     const sumar = () => {
-        if (stockTot === 0) {
-            setButtonActive(false);
-            if (stockUsser > 0) {
-                setButtonActive(true);
-            }
-        }
-        else if (stockTot > 0) {
+        if (stockTot > 0) {
             setStockUsser (stockUsser +1);
             setStockTot (stockTot -1);
         }
@@ -38,7 +31,7 @@ const ItemCountContainer = ({datos, onAdd}) => {
     }
 
     return (
-        <ItemCount id={datos.id} stockUsser={stockUsser} stockTot={stockTot} sumar={sumar} restar={restar} onAdd={onAdd} buttonActive={buttonActive} compra= {compra} /> 
+        <ItemCount id={datos.id} stockUsser={stockUsser} stockTot={stockTot} sumar={sumar} restar={restar} onAdd={onAdd}  compra= {compra} /> 
     )
 }
 

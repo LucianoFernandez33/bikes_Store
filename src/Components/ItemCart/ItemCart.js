@@ -5,13 +5,12 @@ import {CartContext} from "../../Context/CartContext";
 
 const ItemCart = ()=>{
 
-    const [cart,] = useContext(CartContext)
+    const [cart , clear, removeItem ] = useContext(CartContext)
     console.log("carrito", cart)
     
-    
-    cart.forEach(element => {
-        console.log(element.id)
-    });
+    //cart.forEach(element => {
+    //    console.log(element.id)
+    //});
 
     return(
         <div className="container-cart">
@@ -24,9 +23,12 @@ const ItemCart = ()=>{
                     <Card.Text>{x.description}</Card.Text>
                     <Card.Text>{x.descriptionTwo}</Card.Text>
                     <Card.Text>{x.descriptionThree}</Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Card.Text>Cantidad : {x.cantidad}</Card.Text>
+                    <Button variant="primary">Comprar</Button>
+                    <Button variant="warning" onClick={removeItem}>Borrar Producto</Button>
                 </Card.Body>
             </Card>)}
+            <Button variant="danger" onClick={clear} >Vaciar Carrito</Button>
         </div>
     )
 }

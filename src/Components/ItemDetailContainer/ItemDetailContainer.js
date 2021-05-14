@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import ItemCountContainer from '../ItemCountContainer/ItemCountContainer';
+import {CartContext} from "../../Context/CartContext";
+import {Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-    
+
+    const [show, setShow] = useState(true)
+    const [cart, addCart] = useContext(CartContext)
     const [datos, setDatos] = useState({})
     const {id} = useParams()
-    
+    console.log(datos)
     useEffect(()=>{ 
        const getItem = () =>{
 
@@ -302,10 +308,15 @@ const ItemDetailContainer = () => {
     )
  },[]);
 
+ const onAdd = (cantidad) =>{
+    addCart(datos[0],cantidad)
+    setShow(!show)
+}
  return(
         <div>
             {datos.length > 0  ? <ItemDetail datos={datos[0]}/> : 
             <p>Cargando...</p>}
+            {show ? datos.length > 0 ? <ItemCountContainer datos={datos[0]} onAdd={onAdd}/> : <p>Cargando...</p> : <Link to={`/cart`} ><Button>TERMINAR COMPRA</Button></Link>}
         </div>  
     );     
 };

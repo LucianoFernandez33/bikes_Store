@@ -1,15 +1,18 @@
-import React, { useState, useContext} from 'react';
+import React, { useState, useContext,useEffect} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import {CartContext} from "../../Context/CartContext";
 
-const ItemCountContainer = ({id, stockTotal}) => {
-    
-    const [cart, setCart] = useContext(CartContext)
-    const [stockTot, setStockTot] = useState(stockTotal);
+const ItemCountContainer = ({datos, onAdd}) => {
+
+   
+    const [stockTot, setStockTot] = useState(datos.stockTotal);
     const [stockUsser, setStockUsser] = useState(0);
     const [compra, setCompra] = useState(0);
     const [buttonActive, setButtonActive] = useState (true);
     
+    useEffect(() => {
+        
+    }, [stockTot,stockUsser])
     
 
     const sumar = () => {
@@ -33,20 +36,9 @@ const ItemCountContainer = ({id, stockTotal}) => {
             setStockTot (stockTot + 1);
         }
     }
-    const onAdd = () =>{
-        if (stockUsser === 0) {
-            alert (`Debe elegir al menos una unidad para agregar al carrito`)
-        }else {
-            setCompra(stockUsser);
-            setCart([...cart,{id,"cantidad":stockUsser}])
-            //alert (`USTED A COMPRADO ${stockUsser} UNIDADES!`)
-            
-            
-        }
-    }
 
     return (
-        <ItemCount id={id} stockUsser={stockUsser} stockTot={stockTot} sumar={sumar} restar={restar} onAdd={onAdd} buttonActive={buttonActive} compra= {compra} /> 
+        <ItemCount id={datos.id} stockUsser={stockUsser} stockTot={stockTot} sumar={sumar} restar={restar} onAdd={onAdd} buttonActive={buttonActive} compra= {compra} /> 
     )
 }
 

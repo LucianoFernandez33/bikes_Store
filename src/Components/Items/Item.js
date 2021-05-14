@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Item.css"
 import {Card, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import ItemCountContainer from '../ItemCountContainer/ItemCountContainer';
 
 const Item = ({img, description, tittle, price, stockTotal, id, descriptionTwo, descriptionThree, sizes}) =>{
     
@@ -21,7 +20,6 @@ const Item = ({img, description, tittle, price, stockTotal, id, descriptionTwo, 
                         <Button className="button-Caraterist">Ver Caracteristicas</Button>
                     </Link>
                 </Card.Body>
-                    <ItemCountContainer id={id} stockTotal={stockTotal}/>
             </Card> 
         </div>   
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./ItemDetail.css";
 import spy from '../../Assets/spy.jpg';
-import ItemCountContainer from '../ItemCountContainer/ItemCountContainer';
+
 
 // Aca muestro la descripcion del producto que el usuario elige al hacer click en VER CARACTERISTICAS
 
@@ -29,9 +29,6 @@ const ItemDetail = ({datos, id}) =>{
                         </ul>
                     </div>
             </div>   
-            <div className="container-counter-itemDetail">
-                <ItemCountContainer id={id} stockTotal={datos.stockTotal}/>
-            </div>
         </div> 
     
             

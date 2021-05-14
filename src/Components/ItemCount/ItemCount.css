@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-evenly;
     align-content: center;
+    margin: auto;
 }
 .container-buttons-child {
     display: flex;

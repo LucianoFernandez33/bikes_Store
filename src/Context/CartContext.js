@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import ItemCount from '../Components/ItemCount/ItemCount';
 
 export const CartContext = React.createContext([])
 
@@ -22,9 +23,11 @@ export const CartShop = ({children}) => {
         }
     };
     
-
+const addCart =(item, count)=>{
+    setCart([...cart, {...item, cantidad: count }])
+}
     return (
-        <CartContext.Provider value={[cart, setCart]}>
+        <CartContext.Provider value={[cart, addCart]}>
             {children}
         </CartContext.Provider>
     )

@@ -5,7 +5,7 @@ import {CartContext} from "../../Context/CartContext";
 
 const ItemCart = ()=>{
 
-    const [cart, setCart] = useContext(CartContext)
+    const [cart,] = useContext(CartContext)
     console.log("carrito", cart)
     
     
@@ -16,15 +16,17 @@ const ItemCart = ()=>{
     return(
         <div className="container-cart">
             <h1>TU CARRITO DE COMPRAS</h1>
+            {cart.map(x=>
             <Card className="container-child-cartShop">
-                <Card.Img className="imag-cart" variant="top" src="../spy-bullet.png" />
+                <Card.Img className="imag-cart" variant="top" src={x.img} />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>Some quick example text to build on the card title and make up the bulk of
-                    the card's content.</Card.Text>
+                    <Card.Title>{x.title}</Card.Title>
+                    <Card.Text>{x.description}</Card.Text>
+                    <Card.Text>{x.descriptionTwo}</Card.Text>
+                    <Card.Text>{x.descriptionThree}</Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
-            </Card>
+            </Card>)}
         </div>
     )
 }

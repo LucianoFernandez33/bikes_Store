@@ -3,11 +3,11 @@ import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css'
 import {Spinner} from 'react-bootstrap';
 import { useParams } from "react-router";
-import {CartContext} from "../../Context/CartContext";
+
 
 export const ItemListContainer = () => {
    
-   const [cart, setCart] = useContext(CartContext)
+  
    const [datos, setDatos] = useState([])
    const {id} = useParams();
    

@@ -68,6 +68,10 @@
 .container-counter-itemDetail {
     color: white;
 }
+.precioProd {
+    font-size: 1.3em;
+    font-weight: 500;
+}
 
 @media (max-width:780px) {
     .img-itemDetail {

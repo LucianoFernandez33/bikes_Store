@@ -26,6 +26,7 @@ const ItemDetail = ({datos, id}) =>{
                             <li>{datos.descriptionTwo}</li>
                             <li>{datos.descriptionThree}</li>
                             <li>{datos.sizes}</li>
+                            <li className="precioProd">PRECIO : $ {datos.price}</li>
                         </ul>
                     </div>
             </div>   

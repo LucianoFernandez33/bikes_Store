@@ -1,15 +1,17 @@
-import React from "react";
+import React, {useContext} from "react";
 import carrito from '../../Assets/carrito.png';
 import {Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './CartWidget.css';
-
+import {CartContext} from "../../Context/CartContext";
 
 const CartWidget =() => {
+    const {units} = useContext(CartContext);
+
     return (
         <div className="container-img">
             <Link to={`/cart`} ><Button className="button-carrito" variant="outline"><img src={carrito} alt=""/>
-              <b id="contador"> 0</b></Button></Link>{' '}
+              <b className="contador">{units()}</b></Button></Link>{' '}
         </div>
     
     )    

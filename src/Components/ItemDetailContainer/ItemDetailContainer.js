@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom';
 const ItemDetailContainer = () => {
 
     const [show, setShow] = useState(true)
-    const [cart, addCart] = useContext(CartContext)
+    const {cart, addCart} = useContext(CartContext)
     const [datos, setDatos] = useState({})
     const {id} = useParams()
     console.log(datos)

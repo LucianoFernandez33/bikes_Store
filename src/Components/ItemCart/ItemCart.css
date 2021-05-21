@@ -13,3 +13,14 @@
 .imag-cart {
     width: 300px;
 }
+.button-volver {
+    color: white;
+}
+a:hover {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.totCompra {
+    color: white;
+    margin-top: 5px;
+}

@@ -17,3 +17,6 @@ img {
 .contador {
     color: white;
 }
+.contadorVacio {
+    display: none;
+}

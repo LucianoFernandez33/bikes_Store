@@ -6,6 +6,8 @@ export const CartContext = React.createContext([])
 export const CartShop = ({children}) => {
 
     const [cart, setCart] = useState([])
+    const [prueba, setPrueba] = useState([false])
+    const [counterCart, setCounterCart] = useState([false])
 
     useEffect(()=>{
 
@@ -52,8 +54,11 @@ export const CartShop = ({children}) => {
 
     
     //SUMO EL TOTAL POR CANTIDAD DEL MISMO PRODUCTO
-
-    
+    const totalPriceItems = (price, cantidad) =>{
+        const totalPriceItems = price * cantidad;
+        console.log(totalPriceItems, "precio cant prod")
+        return totalPriceItems;
+    }
 
 
     //ELIMINO UN PRODUCTO DEL CARRITO
@@ -66,7 +71,11 @@ export const CartShop = ({children}) => {
     //MUESTRO LAS UNIDADES ALMACENADAS EN EL CARRITO EN EL NAVBAR
     const units = () =>{
         const number = cart.reduce((x,y) => x + y.cantidad, 0);
-        console.log('cantidad añanida al cart del navbar', number)
+        //if (number == 0){
+          //  setCounterCart(false)
+            //console.log(counterCart)
+        //}
+        //console.log('cantidad añanida al cart del navbar', number)
         return number;
     }
 
@@ -77,7 +86,7 @@ export const CartShop = ({children}) => {
     
     
     return (
-        <CartContext.Provider value={{cart, addCart, clear, removeItem, units, addQuantityPrice}}>
+        <CartContext.Provider value={{cart, addCart, clear, removeItem, units, addQuantityPrice, totalPriceItems, prueba}}>
             {children}
         </CartContext.Provider>
     )

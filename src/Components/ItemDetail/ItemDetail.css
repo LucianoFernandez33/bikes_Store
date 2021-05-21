@@ -72,7 +72,17 @@
     font-size: 1.3em;
     font-weight: 500;
 }
-
+.buttonTerminarCompra {
+    color: white;
+    background-color: unset;
+    border: 1px solid white;
+    margin-bottom: 10px;
+}
+.buttonTerminarCompra:hover {
+    color: #655f5b;
+    background-color: white;
+    border: 1px solid white;
+}
 @media (max-width:780px) {
     .img-itemDetail {
         width: 100%;

@@ -10,19 +10,20 @@
     display: flex;
     align-items: center;
     padding: 5px;
+    margin-right: 20px;
 }
 .buttonComprar {
     display: flex;
     font-size: 10px;
     align-items: center;
-    border: 1px solid darkgray;
-    background-color: #3f51b5;
+    border: 1px solid #655f5b;
+    background-color: #655f5b;
     color: white;
 }
 .buttonComprar:hover {
-    background-color: rgb(60, 55, 121);
-    color: rgb(244, 244, 245);
-    border: 1px solid white;
+    background-color: whitesmoke;
+    color: #655f5b;
+    border: 1px solid #655f5b;
 }
 .buttonSumar, .buttonRestar {
     display: flex;
@@ -30,10 +31,20 @@
     justify-content: center;
     height: 20px;
     width: 28px;
-    background-color: #f2f4fb;
-    border-color: #3f51b5;
-    color: black;
+    background-color: #655f5b;
+    border-color: #655f5b;
+    color: white;
     width: max-content;
+}
+.buttonSumar:hover {
+    background-color: whitesmoke;
+    color: #655f5b;
+    border: 1px solid #655f5b;
+}
+.buttonRestar:hover {
+    background-color: whitesmoke;
+    color: #655f5b;
+    border: 1px solid #655f5b;
 }
 .container-counter {
     display: flex;
@@ -46,4 +57,15 @@
     margin: 2px 4px;
     color: white;
     background-color: #f59608;
+    display: flex;
+    width: 10%;
+    justify-content: center;
+}
+.container-counter-itemDetail {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
 }

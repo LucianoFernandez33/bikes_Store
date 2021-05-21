@@ -8,10 +8,11 @@ import {CartContext} from "../../Context/CartContext";
 const CartWidget =() => {
     const {units} = useContext(CartContext);
 
+    //<b className="contador">{units()}</b>
     return (
         <div className="container-img">
             <Link to={`/cart`} ><Button className="button-carrito" variant="outline"><img src={carrito} alt=""/>
-              <b className="contador">{units()}</b></Button></Link>{' '}
+            <b className={units === true ? 'contador' : 'contadorVacio'}>{units()}</b></Button></Link>{' '}
         </div>
     
     )    

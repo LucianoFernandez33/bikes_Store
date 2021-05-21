@@ -30,6 +30,7 @@ li a {
 }
 li a:hover {
     color:rgb(16, 19, 11);
+    text-decoration: none;
 }
 .App-logo {
     width: 15vh;

@@ -2,13 +2,13 @@ import React from "react";
 import './ItemCount.css';
 import {Button} from 'react-bootstrap';
 
-    const ItemCount = ({id, stockUsser, stockTot, sumar, restar, onAdd}) =>{
-        console.log(id)
+    const ItemCount = ({datos, stockUsser, stockTot, sumar, restar, onAdd}) =>{
+        console.log(datos)
     
     return (
             <> 
             <div className="container-counter-itemDetail">
-                <p id={id} className="container-counter-stock">Stock: {stockTot}</p>
+                <p className="container-counter-stock">Stock: {stockTot}</p>
                  <div className="container-buttons">
                 <div className="container-buttons-child">
                     <Button variant="outline-secondary" className="buttonSumar" onClick={sumar} disabled={stockTot === 0}>+</Button>

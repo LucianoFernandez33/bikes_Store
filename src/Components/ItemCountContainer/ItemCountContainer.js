@@ -3,11 +3,11 @@ import ItemCount from '../ItemCount/ItemCount';
 
 
 const ItemCountContainer = ({datos, onAdd}) => {
-
+    
    
     const [stockTot, setStockTot] = useState(datos.stockTotal);
     const [stockUsser, setStockUsser] = useState(0);
-    const [compra, setCompra] = useState(0);
+    const [compra] = useState(0);
     
     useEffect(() => {
         console.log(datos)
@@ -31,7 +31,7 @@ const ItemCountContainer = ({datos, onAdd}) => {
     }
 
     return (
-        <ItemCount id={datos.id} stockUsser={stockUsser} stockTot={stockTot} sumar={sumar} restar={restar} onAdd={onAdd}  compra= {compra} /> 
+        <ItemCount datos={datos} stockUsser={stockUsser} stockTot={datos.stockTotal} sumar={sumar} restar={restar} onAdd={onAdd}  compra= {compra} /> 
     )
 }
 

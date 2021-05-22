@@ -14,9 +14,9 @@ const ItemHotSale = ({productos}) =>{
                 <p>APROVECHA NUESTRA OFERTAS DEL HOTSALE A PRECIOS INSUPERABLES!</p>
             </div>
             <div className="catalogo-HotSale">
-                {productos.map((items)=>
-                <div key={items.id} className="container-card-HotSale">
-                    <Item img={items.img} tittle={items.tittle} description= {items.description} descriptionTwo= {items.descriptionTwo} descriptionThree= {items.descriptionThree} sizes={items.sizes} price={items.price} stockTotal= {items.stockTotal} id= {items.id}/>
+                {productos.map((datos)=>
+                <div key={datos.id} className="container-card-HotSale">
+                    <Item img={datos.img} tittle={datos.tittle} description= {datos.description} descriptionTwo= {datos.descriptionTwo} descriptionThree= {datos.descriptionThree} sizes={datos.sizes} price={datos.price} stockTotal= {datos.stockTotal} id= {datos.id}/>
                 </div>
             )}
             </div>

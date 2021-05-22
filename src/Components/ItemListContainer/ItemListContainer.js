@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext} from "react";
+import React, { useState, useEffect} from "react";
 import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css'
 import {Spinner} from 'react-bootstrap';
@@ -10,7 +10,7 @@ export const ItemListContainer = () => {
    
   
    const [datos, setDatos] = useState([])
-   const [items, setItems] = useState([])
+   //const [items, setItems] = useState([])
    const {id} = useParams();
    const [loading, setLoading] = useState(false);
 
@@ -28,21 +28,21 @@ export const ItemListContainer = () => {
                   ...doc.data()
                }}
                );
-            setItems(documentos)
+            setDatos(documentos)
          })
    .catch((err)=>{
       console.log("Hubo problemas al cargar", err)
    })
    .finally(()=>setLoading(false))
-}, []);
+}, [id]);
 
 useEffect(()=>{
-   items.length && console.log(items)
-}, [items])
+   datos.length && console.log(datos)
+}, [datos])
    
 return(
   <div className="container-products">
-     {items.length > 0 ? <ItemList productos={items}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
+     {datos.length > 0 ? <ItemList productos={datos}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
   </div>
 );
       

@@ -10,7 +10,7 @@ const ItemCountContainer = ({datos, onAdd}) => {
     const [compra, setCompra] = useState(0);
     
     useEffect(() => {
-        
+        console.log(datos)
     }, [stockTot,stockUsser])
     
 

@@ -14,6 +14,7 @@ const ItemDetailContainer = () => {
     const [datos, setDatos] = useState({})
     const {id} = useParams()
     const [items, setItems] = useState([])
+    
     //const [notFound, setNotFound] = useState(false);
 
     console.log(items)
@@ -28,21 +29,21 @@ const ItemDetailContainer = () => {
               console.log("items no existe");
               return;
           }
-          setItems({id: doc.id, ...doc.data()});
+          setDatos({id: doc.id, ...doc.data()});
       }). catch((error) =>console.log("ocurrio un error",error))
         .finally(()=>console.log("finalizado"))
       
   },[])
 
  const onAdd = (cantidad) =>{
-    addCart(datos[0],cantidad)
+    addCart(datos,cantidad)
     setShow(!show)
 }
  return(
         <div>
-            {items.length > 0  ? <ItemDetail items={items}/> : 
+            {datos != {} ? <ItemDetail datos={datos}/> : 
             <p>Cargando...</p>}
-            {show ? items.length > 0 ? <ItemCountContainer items={items[0]} onAdd={onAdd}/> : <p>Cargando...</p> : <Link to={`/cart`} ><Button className="buttonTerminarCompra">TERMINAR COMPRA</Button></Link>}
+            {show ? datos != {} ? <ItemCountContainer datos={datos} onAdd={onAdd}/> : <p>Cargando...</p> : <Link to={`/cart`} ><Button className="buttonTerminarCompra">TERMINAR COMPRA</Button></Link>}
         </div>  
     );     
 };

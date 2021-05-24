@@ -2,23 +2,23 @@ import React, { useState,useEffect} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 
 
-const ItemCountContainer = ({datos, onAdd}) => {
+const ItemCountContainer = ({stockT, onAdd}) => {
     
-   
-    const [stockTot, setStockTot] = useState(datos.stockTotal);
+    console.log(stockT);
+    const [stockTot, setStockTot] = useState(stockT);
     const [stockUsser, setStockUsser] = useState(0);
     const [compra] = useState(0);
     
     useEffect(() => {
-        setStockTot(stockTot);
-        console.log(stockTot);
+        setStockTot(stockT);
+        console.log(stockT);
 
-    }, [stockTot])
+    }, [stockTot,stockT])
     
     const sumar = () => {
-        if (stockTot > 0) {
+        if (stockUsser < stockTot) {
             setStockUsser (stockUsser +1);
-            setStockTot (stockTot -1);
+            console.log("sumar")
         }
     }
     const restar = () => {
@@ -32,7 +32,7 @@ const ItemCountContainer = ({datos, onAdd}) => {
     }
 
     return (
-        <ItemCount datos={datos} stockUsser={stockUsser} stockTot={datos.stockTotal} sumar={sumar} restar={restar} onAdd={onAdd}  compra= {compra} /> 
+        <ItemCount stockUsser={stockUsser} stockTot={stockTot} sumar={sumar} restar={restar} onAdd={onAdd}  compra= {compra} /> 
     )
 }
 

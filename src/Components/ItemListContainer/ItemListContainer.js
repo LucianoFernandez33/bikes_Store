@@ -17,7 +17,8 @@ export const ItemListContainer = () => {
       setLoading(true)
       const db = getFiresTore();  //guardo en variable db el acceso a mi base de datos en fireBase
       const itemsCollection = db.collection("items"); //guardo en itemsCollection toda mi coleccion de items de firebase
-      const filterCollection = id ? itemsCollection.where("categoryId","==", id) : itemsCollection;
+      const filterCollection = id ? itemsCollection.where("category","==", id) : itemsCollection;
+      console.log(id)
       filterCollection.get() //ejecuto una promesa y ejecuto un .then para capturar la respuesta de la promesa
          .then((todosMisProductos)=>{
             todosMisProductos.size === 0 ? console.log("no hay items") : console.log(`Hay ${todosMisProductos.size} items`)

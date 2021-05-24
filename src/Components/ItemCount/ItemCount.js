@@ -2,8 +2,8 @@ import React from "react";
 import './ItemCount.css';
 import {Button} from 'react-bootstrap';
 
-    const ItemCount = ({datos, stockUsser, stockTot, sumar, restar, onAdd}) =>{
-        console.log(datos)
+    const ItemCount = ({ stockUsser, stockTot, sumar, restar, onAdd}) =>{
+        //console.log(datos)
     
     return (
             <> 

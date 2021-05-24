@@ -43,8 +43,10 @@ const ItemCart = ()=>{
             </div>
             :
             <div className="cartVacio">
-                <p>TU CARRITO SE ENCUENTRA VACÍO</p>
-                <Button variant="outline-secondary"className="buttonCart"><Link  to={`/catalogo`}>IR A CATALOGO</Link></Button>
+                <div className="cartVacio-child">
+                    <p>TU CARRITO SE ENCUENTRA VACÍO</p>
+                    <Button variant="outline-secondary"className="buttonCart"><Link  to={`/catalogo`}>IR A CATALOGO</Link></Button>  
+                </div>
             </div>
             }  
         </>

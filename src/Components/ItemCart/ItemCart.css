@@ -46,7 +46,7 @@ a:hover {
     display: flex;
     font-size: 10px;
     align-items: center;
-    border: 1px solid #655f5b;
+    border: 1px solid #ffffff;
     background-color: #655f5b;
     color: white;
     margin: 10px 20px;
@@ -55,4 +55,16 @@ a:hover {
     background-color: whitesmoke;
     color: #655f5b;
     border: 1px solid #655f5b;
+}
+.cartVacio-child {
+    width: 50%;
+    height: 70em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #655f5b;
+    margin: 10px 0px;
+    border-radius: 15px;
 }

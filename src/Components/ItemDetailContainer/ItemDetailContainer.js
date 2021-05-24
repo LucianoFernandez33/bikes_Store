@@ -28,7 +28,7 @@ const ItemDetailContainer = () => {
             }
             setDatos({id: doc.id, 
                 ...doc.data()});
-            console.log(datos) 
+            
       }). catch((error) =>console.log("ocurrio un error",error))
         .finally(()=>console.log("finalizado"))
       
@@ -38,12 +38,12 @@ const ItemDetailContainer = () => {
     addCart(datos,cantidad)
     setShow(!show)
 }
-console.log(datos)
+console.log(datos.stockTotal)
  return(
         <div>
             {datos != {} ? <ItemDetail datos={datos}/> : 
             <p>Cargando...</p>}
-            {show ? datos != {} ? <ItemCountContainer datos={datos} onAdd={onAdd}/> : <p>Cargando...</p> : <Link to={`/cart`} ><Button className="buttonTerminarCompra">TERMINAR COMPRA</Button></Link>}
+            {show ? datos != {} ? <ItemCountContainer stockT={datos.stockTotal} onAdd={onAdd}/> : <p>Cargando...</p> : <Link to={`/cart`} ><Button className="buttonTerminarCompra">TERMINAR COMPRA</Button></Link>}
         </div>  
     );     
 };

@@ -10,15 +10,16 @@ const ItemCountContainer = ({datos, onAdd}) => {
     const [compra] = useState(0);
     
     useEffect(() => {
-        console.log(datos)
-    }, [stockTot,stockUsser])
-    
+        setStockTot(stockTot);
+        console.log(stockTot);
 
+    }, [stockTot])
+    
     const sumar = () => {
-        if (stockTot > 0) {
+       // if (stockTot > 0) {
             setStockUsser (stockUsser +1);
             setStockTot (stockTot -1);
-        }
+        //}
     }
     const restar = () => {
         if (stockUsser === 0) {
@@ -36,3 +37,5 @@ const ItemCountContainer = ({datos, onAdd}) => {
 }
 
 export default ItemCountContainer;
+
+

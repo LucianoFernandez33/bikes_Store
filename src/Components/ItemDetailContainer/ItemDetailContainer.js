@@ -32,9 +32,9 @@ const ItemDetailContainer = () => {
       }). catch((error) =>console.log("ocurrio un error",error))
         .finally(()=>console.log("finalizado"))
       
-  },[id])
-
- const onAdd = (cantidad) =>{
+    },[id])
+    
+    const onAdd = (cantidad) =>{
     addCart(datos,cantidad)
     setShow(!show)
 }

@@ -18,30 +18,7 @@ const Gallery = () => {
                         </Card.Text>
                         <Card.Text> </Card.Text>
                     </Card.ImgOverlay>
-            </Card> 
-            {/*<div className="container-gallery-child">
-                <Card className="bg-dark text-white container-child">
-                    <Card.Img src={gallery02} alt="Card image" />
-                        <Card.ImgOverlay>
-                            <Card.Title> </Card.Title>
-                            <Card.Text>
-                                
-                            </Card.Text>
-                            <Card.Text> </Card.Text>
-                        </Card.ImgOverlay>
-                </Card>
-                <Card className="bg-dark text-white container-child">
-                    <Card.Img src={gallery04} alt="Card image" />
-                        <Card.ImgOverlay>
-                            <Card.Title> </Card.Title>
-                            <Card.Text>
-                
-                            </Card.Text>
-                            <Card.Text> </Card.Text>
-                        </Card.ImgOverlay>
-                </Card>
-            </div>*/}
-            
+            </Card>             
         </div>
     )
 };

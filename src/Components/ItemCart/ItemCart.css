@@ -16,11 +16,43 @@
 .button-volver {
     color: white;
 }
+a{
+    color: white;
+}
 a:hover {
-    color: whitesmoke;
+    color: #655f5b;
     text-decoration: none;
 }
 .totCompra {
     color: white;
     margin-top: 5px;
+}
+.containerButtonCompra{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cartVacio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15em;
+}
+.cartVacio p{
+    color: white;
+}
+.buttonCart {
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    border: 1px solid #655f5b;
+    background-color: #655f5b;
+    color: white;
+    margin: 10px 20px;
+}
+.buttonCart:hover {
+    background-color: whitesmoke;
+    color: #655f5b;
+    border: 1px solid #655f5b;
 }

@@ -10,7 +10,6 @@ export const ItemListContainer = () => {
    
   
    const [datos, setDatos] = useState([])
-   //const [items, setItems] = useState([])
    const {id} = useParams();
    const [loading, setLoading] = useState(false);
 
@@ -18,7 +17,8 @@ export const ItemListContainer = () => {
       setLoading(true)
       const db = getFiresTore();  //guardo en variable db el acceso a mi base de datos en fireBase
       const itemsCollection = db.collection("items"); //guardo en itemsCollection toda mi coleccion de items de firebase
-      itemsCollection.get() //ejecuto una promesa y ejecuto un .then para capturar la respuesta de la promesa
+      const filterCollection = id ? itemsCollection.where("categoryId","==", id) : itemsCollection;
+      filterCollection.get() //ejecuto una promesa y ejecuto un .then para capturar la respuesta de la promesa
          .then((todosMisProductos)=>{
             todosMisProductos.size === 0 ? console.log("no hay items") : console.log(`Hay ${todosMisProductos.size} items`)
             const documentos  = todosMisProductos.docs.map((doc)=>{

@@ -16,10 +16,10 @@ const ItemCountContainer = ({datos, onAdd}) => {
     }, [stockTot])
     
     const sumar = () => {
-       // if (stockTot > 0) {
+        if (stockTot > 0) {
             setStockUsser (stockUsser +1);
             setStockTot (stockTot -1);
-        //}
+        }
     }
     const restar = () => {
         if (stockUsser === 0) {

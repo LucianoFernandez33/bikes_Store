@@ -43,7 +43,12 @@ console.log(datos.stockTotal)
         <div>
             {datos != {} ? <ItemDetail datos={datos}/> : 
             <p>Cargando...</p>}
-            {show ? datos != {} ? <ItemCountContainer stockT={datos.stockTotal} onAdd={onAdd}/> : <p>Cargando...</p> : <Link to={`/cart`} ><Button className="buttonTerminarCompra">TERMINAR COMPRA</Button></Link>}
+            {show ? datos != {} ? <ItemCountContainer stockT={datos.stockTotal} onAdd={onAdd}/> : <p>Cargando...</p> 
+                : 
+            <div style={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>
+                <Link  to={`/catalogo`}><Button variant="outline-secondary" className="buttonTerminarCompra">CONTINUAR COMPRANDO</Button></Link>
+                <Link to={`/cart`} ><Button className="buttonTerminarCompra">TERMINAR COMPRA</Button></Link>
+            </div> }
         </div>  
     );     
 };

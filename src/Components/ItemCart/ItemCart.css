@@ -7,11 +7,13 @@
 }
 .container-child-cartShop {
     display: flex;
-    flex-direction: row-reverse;
-    margin: 10px 70px;
+    flex-direction: row;
+    margin: 10px 40px;
+    max-height: 10rem;
 }
 .imag-cart {
-    width: 300px;
+    width: 10rem;
+    padding: 5px;
 }
 .button-volver {
     color: white;
@@ -56,6 +58,15 @@ a:hover {
     color: #655f5b;
     border: 1px solid #655f5b;
 }
+.buttonCartRemove {
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    border: 1px solid #ffffff;
+    background-color: #655f5b;
+    color: white;
+    margin: 10px 0px;
+}
 .cartVacio-child {
     width: 50%;
     height: 70em;
@@ -67,4 +78,74 @@ a:hover {
     background-color: #655f5b;
     margin: 10px 0px;
     border-radius: 15px;
+}
+.container-col-cartShop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'New Tegomin', serif;
+    margin-left: 20px;
+}
+.container-col-cartShop p {
+    margin-bottom: 0px;
+}
+.container-col-cartShop-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0px 5px;
+    margin: 0px;
+}
+
+@media (max-width:780px) {
+    .imag-cart {
+        width: 25%;
+        padding: 6px;
+    }
+    .container-cart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #efefef;
+        margin: 0px;
+    }
+    .container-child-cartShop {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        max-height: 9rem;
+    }
+    .container-col-cartShop {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'New Tegomin', serif;
+        margin-left: 24px;
+        padding: 10px 0px;
+    }
+    .container-col-cartShop p {
+        margin-bottom: 0px;
+        font-size: 10px;
+    }
+    .container-col-cartShop h5 {
+        margin-bottom: 0px;
+        font-size: 1px;
+    }
+    .container-col-cartShop-buttons {
+        display: flex;
+        padding: 4px;
+        width: 3%;
+    }
+    .buttonCartRemove{
+        display: flex;
+        font-size: 10px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ffffff;
+        background-color: #655f5b;
+        color: white;
+        margin: 0px;
+        padding: 6px 3px;
+        width: 100%;
+    }
 }

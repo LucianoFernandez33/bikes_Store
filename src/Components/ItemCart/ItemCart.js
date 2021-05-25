@@ -20,15 +20,14 @@ const ItemCart = ()=>{
                 {cart.map(x=>
                 <Card className="container-child-cartShop">
                     <Card.Img className="imag-cart" variant="top" src={x.img} />
-                    <Card.Body>
-                        <Card.Title>{x.title}</Card.Title>
-                        <Card.Text>{x.description}</Card.Text>
-                        <Card.Text>{x.descriptionTwo}</Card.Text>
+                    <Card.Body className="container-col-cartShop" >
+                        <Card.Title>{x.tittle}</Card.Title>
                         <Card.Text>PRECIO: $ {x.price}</Card.Text>
                         <Card.Text>Cantidad : {x.cantidad}</Card.Text>
                         <Card.Text>PRECIO TOTAL: $ {totalPriceItems(x.price, x.cantidad)} </Card.Text>
-                        <Button variant="primary">Comprar</Button>
-                        <Button variant="warning" onClick={() => removeItem(x.id)}>Borrar Producto</Button>
+                    </Card.Body>
+                    <Card.Body className="container-col-cartShop-buttons">
+                        <Button variant="outline-secondary" className="buttonCartRemove" onClick={() => removeItem(x.id)}>BORRAR PRODUCTO</Button>
                     </Card.Body>
                 </Card>)}
             </div>

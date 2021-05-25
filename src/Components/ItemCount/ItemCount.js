@@ -11,7 +11,7 @@ import {Button} from 'react-bootstrap';
                 <p className="container-counter-stock">Stock: {stockTot}</p>
                  <div className="container-buttons">
                 <div className="container-buttons-child">
-                    <Button variant="outline-secondary" className="buttonSumar" onClick={sumar} disabled={stockTot === 0}>+</Button>
+                    <Button variant="outline-secondary" className="buttonSumar" onClick={sumar} disabled={stockTot === stockUsser}>+</Button>
                     <p className="container-counter">{stockUsser}</p>
                     <Button variant="outline-secondary" className="buttonRestar" onClick={restar} disabled={stockUsser === 0}>-</Button>
                 </div>

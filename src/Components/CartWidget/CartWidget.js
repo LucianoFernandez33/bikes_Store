@@ -7,28 +7,17 @@ import {CartContext} from "../../Context/CartContext";
 
 const CartWidget =() => {
     const {units} = useContext(CartContext);
-    const [p,setP] = useState(false);
-    //const vacio = units();
-   // if (vacio == 0){
-   //     setP(false)
-    //};
+    const vacio = units();
+    
+    //console.log(vacio)
 
-    console.log(units())
-
-   // useEffect(()=>{
-    //    console.log(vacio)
-//
-    //},[vacio,units])
-
-    //<b className="contador">{units()}</b>
     return (
         <div className="container-img">
-            <Link to={`/cart`} ><Button className="button-carrito" variant="outline"><img src={carrito} alt=""/> 
+            <Link to={`/cart`} ><Button className="button-carrito" variant="outline"><img src={carrito} alt=""/>{vacio != 0 ? <b>{vacio}</b> :<b>{}</b>} 
            </Button></Link>
-           {<span >{units()}</span>}
+           
         </div>
     
     )    
 }
 export default CartWidget;
-//className={units == 0 ? 'contadorVacio' : 'contador'}

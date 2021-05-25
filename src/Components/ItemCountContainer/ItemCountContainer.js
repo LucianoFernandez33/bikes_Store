@@ -4,21 +4,18 @@ import ItemCount from '../ItemCount/ItemCount';
 
 const ItemCountContainer = ({stockT, onAdd}) => {
     
-    console.log(stockT);
     const [stockTot, setStockTot] = useState(stockT);
     const [stockUsser, setStockUsser] = useState(0);
     const [compra] = useState(0);
     
     useEffect(() => {
         setStockTot(stockT);
-        console.log(stockT);
-
+      
     }, [stockTot,stockT])
     
     const sumar = () => {
         if (stockUsser < stockTot) {
             setStockUsser (stockUsser +1);
-            console.log("sumar")
         }
     }
     const restar = () => {

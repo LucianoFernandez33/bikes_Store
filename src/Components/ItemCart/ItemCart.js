@@ -35,7 +35,7 @@ const ItemCart = ()=>{
                 <p className="totCompra">TOTAL COMPRA: $ {addQuantityPrice()}</p>
                 <div className="containerButtonCompra">
                     <Button variant="outline-secondary" className="buttonCart"><Link  to={`/catalogo`}>CONTINUAR COMPRANDO</Link></Button>
-                    <Button variant="outline-secondary" className="buttonCart" onClick={`/`} >TERMINAR COMPRA</Button>
+                    <Button variant="outline-secondary" className="buttonCart"><Link  to={`/CheckOut`}>TERMINAR COMPRA</Link></Button>
                     <Button variant="outline-secondary" className="buttonCart" onClick={()=> clear()} >VACIAR CARRITO</Button>  
                 </div>
             </div>

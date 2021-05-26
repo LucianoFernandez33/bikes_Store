@@ -1,0 +1,50 @@
+.containerPrincipal-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 70px;
+    padding: 20px;
+    background-color: whitesmoke;
+    
+}
+.container-form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.containerForm-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.button-volver{
+    display: flex;
+    align-items: center;
+    background-color: #655f5b;
+    border:1px solid #655f5b;
+    color: white;
+    margin-right: 50px;
+    padding: 2px;
+}
+.button-volver:hover {
+    background-color: whitesmoke;
+    color: #655f5b;
+    border: 1px solid #655f5b;
+}
+.button-orden{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #655f5b;
+    border-color: #655f5b;
+    color: white;
+    padding: 2px;
+}
+.button-orden:hover {
+    background-color: whitesmoke;
+    color: #655f5b;
+    border: 1px solid #655f5b;
+}

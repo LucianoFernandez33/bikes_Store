@@ -10,7 +10,7 @@ import About from './Components/About/About';
 import ItemCart from './Components/ItemCart/ItemCart';
 import {CartShop} from './Context/CartContext';
 import ItemHotSaleContainer from './Components/ItemHotSaleContainer/ItemHotSaleContainer';
-
+import CheckOut from './Components/CheckOut/CheckOut'
 
 function App() {
   return (
@@ -39,6 +39,10 @@ function App() {
                     <Route exact path="/cart">
                         <Gallery/>
                         <ItemCart/>
+                    </Route>
+                    <Route exact path="/CheckOut">
+                        <Gallery/>
+                        <CheckOut/>
                     </Route>
                 </Switch>  
                         <Footer/>     

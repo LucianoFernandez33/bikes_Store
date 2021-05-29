@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Button = ({ event, name, surname, age }) => {
+const ButtonOrder = ({ event, name, surname, email, age }) => {
   return (
     <>
       <button
-        disabled={!(name !== '' && surname !== '' && age !== null)}
+        disabled={!(name !== '' && surname !== '' && email !== '' && age !== null)}
         onClick={event}
         className="button-orden"
       >
@@ -14,4 +14,4 @@ const Button = ({ event, name, surname, age }) => {
   );
 };
 
-export default Button;
+export default ButtonOrder;

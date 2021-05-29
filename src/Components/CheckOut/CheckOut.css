@@ -48,3 +48,26 @@
     color: #655f5b;
     border: 1px solid #655f5b;
 }
+.container-modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(190,190,190, 0.7);
+    
+}
+.container-modal-child {
+    top: 25%;
+    position: relative;
+}
+.modal-content {
+    color: white;
+    background-color: #7473bb
+}
+.modal-body{
+    font-variant: all-petite-caps;
+    color: white;
+}
+.modal-header {
+    display: flex;
+    justify-content: center;
+}

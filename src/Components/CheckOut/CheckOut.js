@@ -11,7 +11,7 @@ import { CartContext } from '../../Context/CartContext';
 
 
 export default function CheckOut(){
-    const {cart, addQuantityPrice} = useContext(CartContext)
+    const {cart, addQuantityPrice,clear} = useContext(CartContext)
     const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', age: null});
     const [loading, setLoading] = useState(false);
     const [err, setError] = useState();
@@ -85,7 +85,7 @@ return (
                 </Modal.Body>
 
                 <Modal.Footer>
-                <Link to={`/`}><Button variant="secondary">Close</Button></Link>
+                <Link to={`/`} onClick={()=> clear()}><Button variant="secondary">Close</Button></Link>
                     <Button variant="primary">Save changes</Button>
                 </Modal.Footer>
             </Modal.Dialog>

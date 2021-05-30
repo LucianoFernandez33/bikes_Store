@@ -6,6 +6,8 @@ import {CartContext} from "../../Context/CartContext";
 import {Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import { getFiresTore } from "../../firebase";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetailContainer = () => {
 
@@ -36,6 +38,7 @@ const ItemDetailContainer = () => {
     
     const onAdd = (cantidad) =>{
     addCart(datos,cantidad)
+    toast("PRODUCTO AGREGADO AL CARRITO!");
     setShow(!show)
 }
 console.log(datos.stockTotal)
@@ -48,6 +51,7 @@ console.log(datos.stockTotal)
             <div style={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>
                 <Link  to={`/catalogo`}><Button variant="outline-secondary" className="buttonTerminarCompra">CONTINUAR COMPRANDO</Button></Link>
                 <Link to={`/cart`} ><Button className="buttonTerminarCompra">TERMINAR COMPRA</Button></Link>
+                <ToastContainer />
             </div> }
         </div>  
     );     

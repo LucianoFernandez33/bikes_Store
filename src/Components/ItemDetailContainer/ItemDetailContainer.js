@@ -38,7 +38,7 @@ const ItemDetailContainer = () => {
     
     const onAdd = (cantidad) =>{
     addCart(datos,cantidad)
-    toast("PRODUCTO AGREGADO AL CARRITO!");
+    toast.info("PRODUCTO AGREGADO AL CARRITO!");
     setShow(!show)
 }
 console.log(datos.stockTotal)

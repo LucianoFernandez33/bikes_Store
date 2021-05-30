@@ -10,6 +10,7 @@ import { getFiresTore } from "../../firebase";
 import { CartContext } from '../../Context/CartContext';
 
 
+
 export default function CheckOut(){
     const {cart, addQuantityPrice,clear} = useContext(CartContext)
     const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', age: null});
@@ -51,10 +52,6 @@ export default function CheckOut(){
         });
 
     } 
-
-    function closeForm(){
-        
-    }
     
 return (
     <>

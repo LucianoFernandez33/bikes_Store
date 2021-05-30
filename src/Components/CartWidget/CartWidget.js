@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext} from "react";
 import carrito from '../../Assets/carrito.png';
 import {Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';

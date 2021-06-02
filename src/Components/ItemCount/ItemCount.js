@@ -11,9 +11,9 @@ import {Button} from 'react-bootstrap';
                 <p className="container-counter-stock">Stock: {stockTot}</p>
                  <div className="container-buttons">
                 <div className="container-buttons-child">
-                    <Button variant="outline-secondary" className="buttonSumar" onClick={sumar} disabled={stockTot === stockUsser}>+</Button>
-                    <p className="container-counter">{stockUsser}</p>
                     <Button variant="outline-secondary" className="buttonRestar" onClick={restar} disabled={stockUsser === 0}>-</Button>
+                    <p className="container-counter">{stockUsser}</p>
+                    <Button variant="outline-secondary" className="buttonSumar" onClick={sumar} disabled={stockTot === stockUsser}>+</Button>
                 </div>
                 <Button variant="outline-secondary" className="buttonComprar" onClick={()=> onAdd(stockUsser)} disabled={stockUsser === 0}>AGREGAR AL CARRITO</Button>
                 </div> 

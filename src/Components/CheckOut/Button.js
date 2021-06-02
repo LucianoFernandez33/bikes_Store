@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ButtonOrder = ({ event, name, surname, email, age }) => {
+const ButtonOrder = ({ event, name, surname, email, tel }) => {
   return (
     <>
       <button
-        disabled={!(name !== '' && surname !== '' && email !== '' && age !== null)}
+        disabled={!(name !== '' && surname !== '' && email !== '' && tel !== null)}
         onClick={event}
         className="button-orden"
       >

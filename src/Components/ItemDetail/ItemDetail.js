@@ -3,8 +3,6 @@ import "./ItemDetail.css";
 import spy from '../../Assets/spy.jpg';
 
 
-// Aca muestro la descripcion del producto que el usuario elige al hacer click en VER CARACTERISTICAS
-
 const ItemDetail = ({datos}) =>{
    
     console.log(datos)

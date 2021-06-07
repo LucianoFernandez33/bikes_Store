@@ -16,8 +16,9 @@ const NavBar =() => {
                     <ul className="mr-auto">
                         <li><Link to={`/`} >HOME</Link></li>
                         <li><NavDropdown title="ARTICULOS" id="basic-nav-dropdown">
-                            <NavDropdown.Item><Link to={`/categories/bicicletas`}>BICICLETAS</Link></NavDropdown.Item>
                             <NavDropdown.Item><Link to={`/categories/accesorios`}>ACCESORIOS</Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to={`/categories/indumentaria`}>INDUMENTARIA</Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to={`/categories/bicicletas`}>BICICLETAS</Link></NavDropdown.Item>
                             <NavDropdown.Item><Link to={`/catalogo`}>VER TODO</Link></NavDropdown.Item>
                             </NavDropdown></li>
                         <li><Link to={`/sobre-nosotros`} >NOSOTROS</Link></li>

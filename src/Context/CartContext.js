@@ -5,11 +5,11 @@ export const CartContext = React.createContext([])
 
 export const CartShop = ({children}) => {
 
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')):[])
     const [vacio, setVacio] = useState(false)
     
     useEffect(()=>{
-
+        localStorage.setItem('cart', JSON.stringify(cart));
         console.log(cart)
         
     },[cart]);
@@ -80,10 +80,21 @@ export const CartShop = ({children}) => {
     const clear = () =>
     setCart([]);
 
+    function printDiv(imprimeme) {
+        var contenido= document.getElementById(imprimeme).innerHTML;
+        var contenidoOriginal= document.body.innerHTML;
+   
+        document.body.innerHTML = contenido;
+   
+        window.print();
+   
+        document.body.innerHTML = contenidoOriginal;
+   }
+
     
     
     return (
-        <CartContext.Provider value={{cart, addCart, clear, removeItem, units, addQuantityPrice, totalPriceItems,vacio}}>
+        <CartContext.Provider value={{cart, addCart, clear, removeItem, units, addQuantityPrice, totalPriceItems, printDiv, vacio}}>
             {children}
         </CartContext.Provider>
     )

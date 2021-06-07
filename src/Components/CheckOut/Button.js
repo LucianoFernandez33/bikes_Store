@@ -1,4 +1,6 @@
 import React from 'react';
+import './CheckOut.css'
+import {Spinner} from 'react-bootstrap';
 
 const ButtonOrder = ({ event, name, surname, email, tel }) => {
   return (
@@ -8,8 +10,18 @@ const ButtonOrder = ({ event, name, surname, email, tel }) => {
         onClick={event}
         className="button-orden"
       >
-        CREAR ORDEN
+       CREAR ORDEN
       </button>
+      <button className="loading-button" variant="primary" disabled>
+        <Spinner
+          as="span"
+          animation="grow"
+          size="sm"
+          role="status"
+          aria-hidden="true"
+        />
+        Loading...
+        </button>
     </>
   );
 };

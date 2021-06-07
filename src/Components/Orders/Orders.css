@@ -1,0 +1,24 @@
+.container-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #21231d;
+    margin: 0px 70px;
+    
+}
+.container-modal-child {
+    top: 25%;
+   
+}
+.modal-content {
+    color: white;
+    background-color: #7473bb
+}
+.modal-body{
+    font-variant: all-petite-caps;
+    color: white;
+}
+.modal-header {
+    display: flex;
+    justify-content: center;
+}

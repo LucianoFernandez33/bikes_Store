@@ -8,15 +8,21 @@ import firebase from "firebase/app";
 import '../../firebase';
 import { getFiresTore } from "../../firebase";
 import { CartContext } from '../../Context/CartContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import tilde from '../../Assets/tilde.png';
+import Orders from '../Orders/Orders';
 
 
 
-export default function CheckOut(){
-    const {cart, addQuantityPrice,clear,stockTotal,totalPriceItems} = useContext(CartContext)
-    const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', tel: null});
+export function CheckOut(){
+    const {cart, addQuantityPrice,clear} = useContext(CartContext)
+    const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', emailDos:'', tel: null});
     const [loading, setLoading] = useState(false);
     const [err, setError] = useState();
     const [orderId,setOrderId] = useState();
+    const [message, setMessage] = useState(null);
+    const [imgError, setImgError] = useState(null);
     console.log(cart);
 
     
@@ -27,10 +33,15 @@ export default function CheckOut(){
         });
     }
     function onSubmit() {
-        console.log(
-            `SU NOMBRE ES ${userInfo.name} ${userInfo.surname} y tiene ${userInfo.tel} años`
-        );
-        createOrder();
+        if(userInfo.email !== userInfo.emailDos){
+            setMessage("**Parece que los emails que ingresaste no coinciden**")
+            console.log("mails incorrectos")
+          }else{
+            setMessage("");
+            toast.info("PROCESANDO COMPRA...");
+            createOrder();
+            clear();
+        }
     }
 
      async function createOrder(){
@@ -67,7 +78,8 @@ export default function CheckOut(){
         }
     } 
     console.log(cart)
-
+    console.log(orderId)
+    
     function printDiv(imprimeme) {
         var contenido= document.getElementById(imprimeme).innerHTML;
         var contenidoOriginal= document.body.innerHTML;
@@ -78,6 +90,7 @@ export default function CheckOut(){
    
         document.body.innerHTML = contenidoOriginal;
    }
+   
 return (
     <>
     <div className="containerPrincipal-form">
@@ -86,61 +99,38 @@ return (
             <Input type="text" event={handleInputChange} text="Nombre" name="name"></Input>
             <Input type="text" event={handleInputChange} text="Apellido" name="surname"></Input>
             <Input type="email" event={handleInputChange} text="Email" name="email"></Input>
+            <Input type="email" event={handleInputChange} text="Validar Email" name="emailDos"></Input>
             <Input type="number" event={handleInputChange} text="Telefono" name="tel"></Input>
+                <p className="error-email">{message}</p>
+            {!orderId ?
             <div className="containerForm-buttons">
                 <Link to={`/cart`} className="button-volver">VOLVER</Link>
-                <ButtonOrder  name={userInfo.name} surname={userInfo.surname} tel={userInfo.tel} event={onSubmit}></ButtonOrder>
-            </div>
+                <ButtonOrder  name={userInfo.name} surname={userInfo.surname} tel={userInfo.tel} event={onSubmit}></ButtonOrder>                
+                <ToastContainer 
+                    position="bottom-center"
+                    autoClose={1200}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover/>
+            </div> :
+            <div>
+                 
+                    <div style={{marginTop: '0px'}}>
+                    <img src={tilde} alt=""/>
+                        <p style={{color: 'black', fontWeight: 'bold', textDecoration: 'underline',marginTop: '5px'}}>Nº DE ORDEN: </p>
+                        <p style={{backgroundColor: '#29c4f3', color: 'white'}}>{orderId}</p>
+                        <Link to={`/Orders`}><Button variant="secondary">VER ORDEN DE COMPRA</Button></Link>
+                    </div>
+                </div>
+                }
         </div>
     </div>
-    <div>
-    <div className="check-order">VERIFICACIÓN DE PEDIDO</div>
     
-        <table className="checkout-order">
-            <thead className="checkout-order__head">
-                <th>TITULO</th>
-                <th>CANTIDAD</th>
-                <th>PRECIO </th>
-                <th>SUBTOTAL:</th>
-            </thead>
-            <tbody>
-                {cart.map(x=> {
-                    <tr key={x.id} className="checkout-order__item">
-                        <td>{x.tittle} </td>
-                        <td>{x.cantidad}</td>
-                        <td> $ {x.price} </td>
-                        <td> $ {totalPriceItems(x.price, x.cantidad)}</td>
-                    </tr>
-                })}
-                <li className="checkout-order__total">
-                    <span>Total: </span> <span> $ {addQuantityPrice()} </span>
-                </li>
-          </tbody>
-        </table>
-    </div>
-    
-    
-    {orderId &&
-    <div id="imprimeme" className="container-modal">
-        <div className="container-modal-child" >
-            <Modal.Dialog >
-                <Modal.Header >
-                    <Modal.Title>FACTURA DE COMPRA</Modal.Title>
-                </Modal.Header>
-
-                <Modal.Body>
-                    <p>NUMERO DE SEGUIMIENTO DE ORDEN : <b>{orderId}</b></p>
-                    <p>SE HA ENVIADO UN MAIL A SU CORREO CON LOS DATOS DE SU COMPRA Y EL CÓDIGO DE SEGUIMIENTO</p>
-                    <p>GRACIAS POR SU COMPRA!</p>
-                </Modal.Body>
-
-                <Modal.Footer>
-                <Link to={`/`} onClick={()=> clear()}><Button variant="secondary">CERRAR</Button></Link>
-                    <Button onClick={()=>printDiv('imprimeme')} variant="primary">IMPRIMIR COMPROBANTE</Button>
-                </Modal.Footer>
-            </Modal.Dialog>
-        </div>
-    </div>}
     </>
 )
 }
+export default CheckOut;

@@ -17,10 +17,10 @@ const About = () => {
                 <Card className="container-card-two">
                     <Card.Body>
                         <Card.Text>
-                        Somos una empresa ubicada en San Nicolás de los Arroyos, Provincia de Buenos Aires dedicada a la venta como agente oficial de la mejores marcas de bicicletas que se importan en nuestro País.
-                        Contamos con un showrrom donde exhibimos todos nuestros productos disponibles.
-                        Brindamos el mejor acesoramiento tecnico para la elección de tu bicicleta y conectarte con esta apacionante actividad.
-                        Todos nuestro productos son originales tal cual vienen de fabrica de esta forma ofrecemos una garantia que nadie mas puede brindarte
+                        Somos una Empresa ubicada en San Nicolás de los Arroyos, Provincia de Buenos Aires dedicada a la venta como agente Oficial de la mejores marcas de Bicicletas que se importan en nuestro País.
+                        Contamos con un showroom donde exhibimos todos nuestros productos disponibles.
+                        Brindamos el mejor asesoramiento técnico para la elección de tu Bicicleta y conectarte con esta apasionante actividad.
+                        Todos nuestro productos son originales tal cual vienen de fabrica de esta forma ofrecemos una garantía que nadie mas puede brindarte
                         </Card.Text>
                     </Card.Body>
                     <Card.Img  variant="bottom" src={nosotros03} />

@@ -46,12 +46,13 @@ console.log(datos.stockTotal)
         <div>
             {datos != {} ? <ItemDetail datos={datos}/> : 
             <p>Cargando...</p>}
-            {show ? datos != {} ? <ItemCountContainer stockT={datos.stockTotal} onAdd={onAdd}/> : <p>Cargando...</p> 
+            {show ? datos != {} ? <div style={{marginBottom: '5px'}}><ItemCountContainer stockT={datos.stockTotal} onAdd={onAdd}/><a href="javascript: history.go(-1)">Volver</a></div>: <p>Cargando...</p> 
                 : 
             <div style={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>
                 <Link  to={`/catalogo`}><Button variant="outline-secondary" className="buttonTerminarCompra">CONTINUAR COMPRANDO</Button></Link>
                 <Link to={`/cart`} ><Button className="buttonTerminarCompra">TERMINAR COMPRA</Button></Link>
-                <ToastContainer />
+                <ToastContainer 
+                    autoClose={1500}/>
             </div> }
         </div>  
     );     

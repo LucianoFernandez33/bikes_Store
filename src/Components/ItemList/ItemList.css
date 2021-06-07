@@ -27,6 +27,30 @@
 .img-catalogo {
     width: 100%;
 }
+.navTwo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.navTwo li a {
+    color:darkgray;
+    background-color: rgb(212, 242, 243);
+    padding: 5px;
+    border-radius: 10px;
+} 
+.navTwo li a:focus {
+    color: rgb(138, 131, 233);
+    background-color: rgb(236, 240, 18);
+    padding: 5px;
+    border-radius: 10px;
+}
+.navTwo li a:hover {
+    color: rgb(70, 176, 238);
+    background-color: rgb(240, 191, 100);
+    padding: 5px;
+    border-radius: 10px;
+}
 @media (max-width:480px) {
     .container-productos {
         background-color: #efefef;

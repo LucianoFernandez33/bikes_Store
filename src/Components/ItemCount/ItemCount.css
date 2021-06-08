@@ -69,3 +69,13 @@
     justify-content: center;
     align-content: stretch;
 }
+@media (max-width:480px) {
+    .container-counter-stock {
+        margin: 2px 4px;
+        color: white;
+        background-color: #f59608;
+        display: flex;
+        width: 20%;
+        justify-content: center;
+    }
+}

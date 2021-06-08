@@ -23,7 +23,6 @@ export const ItemListContainer = () => {
          .then((todosMisProductos)=>{
             todosMisProductos.size === 0 ? console.log("no hay items") : console.log(`Hay ${todosMisProductos.size} items`)
             const documentos  = todosMisProductos.docs.map((doc)=>{
-               //console.log(doc)
                return { //armo un objeto nuevo creando una variable id con la info del id del producto y que me lo agregue al doc.data
                   id: doc.id,
                   ...doc.data()
@@ -38,7 +37,6 @@ export const ItemListContainer = () => {
 }, [id]);
 
 useEffect(()=>{
-   datos.length && console.log(datos)
 }, [datos])
    
 return(

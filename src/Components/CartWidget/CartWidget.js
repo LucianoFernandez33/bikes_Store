@@ -9,11 +9,9 @@ const CartWidget =() => {
     const {units} = useContext(CartContext);
     const vacio = units();
     
-    //console.log(vacio)
-
     return (
         <div className="container-img">
-            <Link to={`/cart`} ><Button className="button-carrito" variant="outline"><img src={carrito} alt=""/>{vacio != 0 ? <b>{vacio}</b> :<b>{}</b>} 
+            <Link to={`/cart`} ><Button className="button-carrito" variant="outline"><img src={carrito} alt=""/>{vacio !== 0 ? <b>{vacio}</b> :<b>{}</b>} 
            </Button></Link>
            
         </div>

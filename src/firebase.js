@@ -4,12 +4,12 @@ import 'firebase/firestore';
 //variable app donde inicializo mi app de firebase con el objeto de toda la data que tengo que darle
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyDE5YH1keEuQDDTr3MfdXc4iezlDApl8YI",
-    authDomain: "ecommerce-bikestore.firebaseapp.com",
-    projectId: "ecommerce-bikestore",
-    storageBucket: "ecommerce-bikestore.appspot.com",
-    messagingSenderId: "386061758734",
-    appId: "1:386061758734:web:0ecfa37db89959abeae75f"
+  appId: process.env.REACT_APP_APP_ID,
+  apiKey: process.env.REACT_APP_API_KEY,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID
 })
 
 // creo una funcion que retorna app de arrriba

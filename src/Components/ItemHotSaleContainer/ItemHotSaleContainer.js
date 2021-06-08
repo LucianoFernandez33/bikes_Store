@@ -17,7 +17,7 @@ export const ItemHotSaleContainer = () => {
       const itemsHotSale = itemsCollection.where('price', '>', 40000).where('price','<', 60000); 
       itemsHotSale.get() 
          .then((productosHotSale)=>{
-            productosHotSale.size === 0 ? console.log("no hay items") : console.log(`Hay ${productosHotSale.size} items`)
+           // productosHotSale.size === 0 ? console.log("no hay items") : console.log(`Hay ${productosHotSale.size} items`)
             const documentos  = productosHotSale.docs.map((doc)=>{
                return { 
                   id: doc.id,
@@ -32,7 +32,7 @@ export const ItemHotSaleContainer = () => {
    .finally(()=>setLoading(false))
 }, []);
 useEffect(()=>{
-   datos.length && console.log(datos)
+   //datos.length && console.log(datos)
 }, [datos])
    
 return(

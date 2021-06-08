@@ -4,9 +4,7 @@ import spy from '../../Assets/spy.jpg';
 
 
 const ItemDetail = ({datos}) =>{
-   
-    console.log(datos)
-    
+       
     return (
     
            <div key= {datos.id} className="container-itemDetail-principal">

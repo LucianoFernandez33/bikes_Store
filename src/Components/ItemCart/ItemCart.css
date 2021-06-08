@@ -148,4 +148,10 @@ a:hover {
         padding: 6px 3px;
         width: 100%;
     }
+    .cartVacio{
+        margin: 78px 0px;
+    }
+    .cartVacio-child {
+        width: 70%;
+    }
 }

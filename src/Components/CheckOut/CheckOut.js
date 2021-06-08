@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import Input from './Input'
 import ButtonOrder from './Button'
 import {Link} from 'react-router-dom';
-import {Modal, Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import './CheckOut.css'
 import firebase from "firebase/app";
 import '../../firebase';
@@ -11,12 +11,10 @@ import { CartContext } from '../../Context/CartContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import tilde from '../../Assets/tilde.png';
-import Orders from '../Orders/Orders';
-
 
 
 export function CheckOut(){
-    const {cart, addQuantityPrice,clear} = useContext(CartContext)
+    const {cart, addQuantityPrice,clear,setOrderUsser,orderUsser} = useContext(CartContext)
     const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', emailDos:'', tel: null});
     const [loading, setLoading] = useState(false);
     const [err, setError] = useState();
@@ -73,13 +71,15 @@ export function CheckOut(){
             try {
                 const {id} = await orders.add(newOrders)
                 setOrderId(id)
+                setOrderUsser(id,userInfo)
                 console.log(id)
             }catch(err){console.log(err)}
         }
     } 
     console.log(cart)
     console.log(orderId)
-    
+    console.log(orderUsser,"- guardado en cartcontext")
+
     function printDiv(imprimeme) {
         var contenido= document.getElementById(imprimeme).innerHTML;
         var contenidoOriginal= document.body.innerHTML;

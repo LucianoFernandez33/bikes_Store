@@ -6,7 +6,6 @@
     margin: 0px 70px;
     padding: 20px;
     background-color: whitesmoke;
-    
 }
 .container-form{
     width: 80%;
@@ -67,4 +66,18 @@
 }
 .loading-button{
     display: none;
+}
+
+@media (max-width:480px) {
+   .containerPrincipal-form h1 {
+       font-size: 2.3vh;
+   }
+   .container-form{
+    width: inherit;
+    padding-right: 20px;
+}
+.containerPrincipal-form{
+    margin: 0px 53px;
+    padding: 29px;
+}
 }

@@ -7,11 +7,10 @@ export const CartShop = ({children}) => {
 
     const [cart, setCart] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')):[])
     const [vacio, setVacio] = useState(false)
+    const [orderUsser, setOrderUsser] = useState();
     
     useEffect(()=>{
-        localStorage.setItem('cart', JSON.stringify(cart));
-        console.log(cart)
-        
+        localStorage.setItem('cart', JSON.stringify(cart));        
     },[cart]);
 
 
@@ -53,7 +52,6 @@ export const CartShop = ({children}) => {
     //SUMO EL TOTAL POR CANTIDAD DEL MISMO PRODUCTO
     const totalPriceItems = (price, cantidad) =>{
         const totalPriceItems = price * cantidad;
-        console.log(totalPriceItems, "precio cant prod")
         return totalPriceItems;
     }
 
@@ -67,11 +65,9 @@ export const CartShop = ({children}) => {
     //MUESTRO LAS UNIDADES ALMACENADAS EN EL CARRITO EN EL NAVBAR
     const units = () =>{
         const number = cart.reduce((x,y) => (x + y.cantidad), 0);
-        console.log(number)
         if (number == 0) {
             setVacio(false)
         }
-        console.log(number)
         return number;
         
     }
@@ -94,7 +90,7 @@ export const CartShop = ({children}) => {
     
     
     return (
-        <CartContext.Provider value={{cart, addCart, clear, removeItem, units, addQuantityPrice, totalPriceItems, printDiv, vacio}}>
+        <CartContext.Provider value={{cart, addCart, clear, removeItem, units, addQuantityPrice, totalPriceItems, printDiv, vacio, orderUsser,setOrderUsser}}>
             {children}
         </CartContext.Provider>
     )

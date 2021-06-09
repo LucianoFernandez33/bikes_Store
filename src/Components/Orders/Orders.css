@@ -33,6 +33,10 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
+.buyers li b, .container-modal-child p, .order-item b, .order-total b,.order-fecha b {
+    color: black;
+    font-weight: 600;
+}
 .container-order {
     padding: 0px;
     display: flex;

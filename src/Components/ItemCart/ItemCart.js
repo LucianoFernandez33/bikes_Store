@@ -18,7 +18,7 @@ const ItemCart = ()=>{
                 <div className="container-cart">
                 <h1>TU CARRITO DE COMPRAS</h1>
                 {cart.map(x=>
-                <Card className="container-child-cartShop">
+                <Card className="container-child-cartShop" >
                     <Card.Img className="imag-cart" variant="top" src={x.img} />
                     <Card.Body className="container-col-cartShop" >
                         <Card.Title>{x.tittle}</Card.Title>

@@ -8,6 +8,7 @@ import {Link} from 'react-router-dom';
 import { getFiresTore } from "../../firebase";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../../Components/Loading/Loading'
 
 const ItemDetailContainer = () => {
 
@@ -15,14 +16,14 @@ const ItemDetailContainer = () => {
     const { addCart} = useContext(CartContext)
     const [datos, setDatos] = useState({})
     const {id} = useParams()
-    
+    const [loading, setLoading] = useState(false);
 
   useEffect(()=>{
+    setLoading(true)
       const db = getFiresTore();
       const itemsCollection = db.collection("items");
       const itemDetail = itemsCollection.doc(id);
       itemDetail.get().then((doc)=>{
-           
           if (!doc.exists) {
               console.log("items no existe");
               return;
@@ -31,7 +32,7 @@ const ItemDetailContainer = () => {
                 ...doc.data()});
             
       }). catch((error) =>console.log("ocurrio un error",error))
-        .finally(()=>console.log("finalizado"))
+      .finally(()=>setLoading(false))
       
     },[id])
     
@@ -43,8 +44,7 @@ const ItemDetailContainer = () => {
 
  return(
         <div>
-            {datos != {} ? <ItemDetail datos={datos}/> : 
-            <p>Cargando...</p>}
+            {loading ? <Loading /> : <ItemDetail datos={datos}/>}
             {show ? datos !== {} ? <div style={{marginBottom: '5px'}}><ItemCountContainer stockT={datos.stockTotal} onAdd={onAdd}/><a href="javascript: history.go(-1)">Volver</a></div>: <p>Cargando...</p> 
                 : 
             <div style={{display:"flex", justifyContent:"space-around", alignItems:"center"}}>

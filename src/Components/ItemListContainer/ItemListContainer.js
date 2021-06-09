@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from "react";
 import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css'
-import {Spinner} from 'react-bootstrap';
 import { useParams } from "react-router";
 import {getFiresTore} from "../../firebase";
+import Loading from '../../Components/Loading/Loading'
 
 
 export const ItemListContainer = () => {
@@ -18,7 +18,6 @@ export const ItemListContainer = () => {
       const db = getFiresTore();  //guardo en variable db el acceso a mi base de datos en fireBase
       const itemsCollection = db.collection("items"); //guardo en itemsCollection toda mi coleccion de items de firebase
       const filterCollection = id ? itemsCollection.where("category","==", id) : itemsCollection;
-      console.log(id)
       filterCollection.get() //ejecuto una promesa y ejecuto un .then para capturar la respuesta de la promesa
          .then((todosMisProductos)=>{
             todosMisProductos.size === 0 ? console.log("no hay items") : console.log(`Hay ${todosMisProductos.size} items`)
@@ -41,7 +40,7 @@ useEffect(()=>{
    
 return(
   <div className="container-products">
-     {datos.length > 0 ? <ItemList productos={datos}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
+     {datos.length > 0 ? <ItemList productos={datos}/> :  <Loading />}
   </div>
 );
       

@@ -2,11 +2,11 @@ import React from 'react';
 import './CheckOut.css'
 import {Spinner} from 'react-bootstrap';
 
-const ButtonOrder = ({ event, name, surname, email, tel }) => {
+const ButtonOrder = ({ event, name, surname, email, direccion, tel }) => {
   return (
     <>
       <button
-        disabled={!(name !== '' && surname !== '' && email !== '' && tel !== null)}
+        disabled={!(name !== '' && surname !== '' && email !== '' && direccion !== '' && tel !== null)}
         onClick={event}
         className="button-orden"
       >

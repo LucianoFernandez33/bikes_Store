@@ -15,13 +15,14 @@ import tilde from '../../Assets/tilde.png';
 
 export function CheckOut(){
     const {cart, addQuantityPrice,clear,setOrderUsser,orderUsser} = useContext(CartContext)
-    const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', emailDos:'', tel: null});
+    const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', emailDos:'', direccion:'', tel: null});
     const [loading, setLoading] = useState(false);
     const [err, setError] = useState();
     const [orderId,setOrderId] = useState();
     const [message, setMessage] = useState(null);
     const [imgError, setImgError] = useState(null);
-    console.log(cart);
+
+    console.log(cart,"cart");
 
     
     function handleInputChange(evt){
@@ -38,7 +39,7 @@ export function CheckOut(){
             setMessage("");
             toast.info("PROCESANDO COMPRA...");
             createOrder();
-            clear();
+            //clear();
         }
     }
 
@@ -71,14 +72,14 @@ export function CheckOut(){
             try {
                 const {id} = await orders.add(newOrders)
                 setOrderId(id)
-                setOrderUsser(id,userInfo)
+                setOrderUsser(id,userInfo,cart)
                 console.log(id)
             }catch(err){console.log(err)}
         }
     } 
-    console.log(cart)
-    console.log(orderId)
-    console.log(orderUsser,"- guardado en cartcontext")
+    console.log(userInfo)
+    console.log(orderId, "OrderId")
+    console.log(orderUsser,"- guardado en cartcontext orderUsser")
 
     function printDiv(imprimeme) {
         var contenido= document.getElementById(imprimeme).innerHTML;
@@ -98,14 +99,15 @@ return (
         <div className="container-form">
             <Input type="text" event={handleInputChange} text="Nombre" name="name"></Input>
             <Input type="text" event={handleInputChange} text="Apellido" name="surname"></Input>
+            <Input type="text" event={handleInputChange} text="Dirección" name="direccion"></Input>
+            <Input type="number" event={handleInputChange} text="Telefono" name="tel"></Input>
             <Input type="email" event={handleInputChange} text="Email" name="email"></Input>
             <Input type="email" event={handleInputChange} text="Validar Email" name="emailDos"></Input>
-            <Input type="number" event={handleInputChange} text="Telefono" name="tel"></Input>
                 <p className="error-email">{message}</p>
             {!orderId ?
             <div className="containerForm-buttons">
                 <Link to={`/cart`} className="button-volver">VOLVER</Link>
-                <ButtonOrder  name={userInfo.name} surname={userInfo.surname} tel={userInfo.tel} event={onSubmit}></ButtonOrder>                
+                <ButtonOrder  name={userInfo.name} surname={userInfo.surname} tel={userInfo.tel} email={userInfo.email}event={onSubmit}></ButtonOrder>                
                 <ToastContainer 
                     position="bottom-center"
                     autoClose={1200}
@@ -118,7 +120,7 @@ return (
                     pauseOnHover/>
             </div> :
             <div>
-                 
+                    
                     <div style={{marginTop: '0px'}}>
                     <img src={tilde} alt=""/>
                         <p style={{color: 'black', fontWeight: 'bold', textDecoration: 'underline',marginTop: '5px'}}>Nº DE ORDEN: </p>

@@ -65,7 +65,7 @@ export const CartShop = ({children}) => {
     //MUESTRO LAS UNIDADES ALMACENADAS EN EL CARRITO EN EL NAVBAR
     const units = () =>{
         const number = cart.reduce((x,y) => (x + y.cantidad), 0);
-        if (number == 0) {
+        if (number === 0) {
             setVacio(false)
         }
         return number;

@@ -19,7 +19,7 @@ const Footer = () => {
                             <a href="https://www.facebook.com" target="blank"><li><img src={facebook} alt="logo de facebook"/></li></a>
                             <a href="https://www.instagram.com" target="blank"><li><img src={instagram} alt="logo de instagram"/></li></a>
                             <a href="https://web.whatsapp.com/" target="blank"><li><img src={whatss} alt="logo de whatssap"/></li></a>
-                            <a class="correo" href="mailto: bikesStore@gmail.com"><li><img src={email} alt="logo de email"/></li></a>
+                            <a className="correo" href="mailto: bikesStore@gmail.com"><li><img src={email} alt="logo de email"/></li></a>
                         </ul>
                     </div>
                 </div>

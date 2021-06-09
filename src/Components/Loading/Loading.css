@@ -1,0 +1,17 @@
+.container-father {
+    height: 100vh;
+    position: relative;
+}
+
+.container-children {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.container-children img {
+    width: 100px;
+    height: 100px;
+}

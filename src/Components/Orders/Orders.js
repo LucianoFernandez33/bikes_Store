@@ -1,41 +1,50 @@
 import React, {useContext,useEffect,useState} from 'react'
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import {Modal, Button} from 'react-bootstrap';
 import {getFiresTore} from "../../firebase";
 import { CartContext } from '../../Context/CartContext';
 import './Orders.css'
 
 const Orders = () => {
-    const {clear, printDiv,orderUsser,cart} = useContext(CartContext)
+    const {clear, printDiv,orderUsser} = useContext(CartContext)
     const [loading, setLoading] = useState(false);
     const [err, setError] = useState();
-    const [items, setItems] = useState();
+    const [items, setItems] = useState([]);
     const [buyer, setBuyer] = useState([]);
-    const [status, setStatus]= useState('');
-    console.log(orderUsser)
-    console.log(cart)
+    const [status, setStatus] =useState([])
     
+           
+
     useEffect(() => {
+        setLoading(true)
         const db = getFiresTore();
-        const orderCollection = db.collection('orders').doc(orderUsser);
+        const orderCollection = db.collection('orders').doc("rpomjePCIvS5FrT7RFo7");
           orderCollection.get()
           .then(res=>{
               if(!res.exists){
                   setError(true)
               }
-            setItems({orderUsser: res.data().items, total: res.data().total, status:res.data().status, date:res.data().date.toDate()})
+            setItems({orderItem: res.data().items, total: res.data().total, status:res.data().status, date:res.data().date.toDate()})
+            console.log(res.data().items)
+            {items !=={} && console.log(items.orderItem,"items")}
             console.log(items)
-            setBuyer(res.data().buyer[0])
-            console.log(buyer)
-            //setStatus(res.data().status)
-           // console.log(status)
-            //setLoading(true)
+            setBuyer(res.data().buyer)
+            console.log(res.data().buyer.name,"buyer")
+            setStatus(res.data().status)
+            console.log(status)
+            setLoading(true)
           })
             .catch((err)=>{
                 console.log("Hubo problemas al cargar", err)
              })
              .finally(()=>setLoading(false))
           }, [orderUsser]);
+
+          const fecha =(x)=>{
+            if(x){
+            return `${x.getDate()}/${(x.getMonth()+1)}/${x.getFullYear()} -${x.getHours()}:${x.getMinutes()}hs`
+            }
+        }
 
     return (
             
@@ -45,39 +54,43 @@ const Orders = () => {
                         <Modal.Header >
                             <Modal.Title>FACTURA DE COMPRA</Modal.Title>
                         </Modal.Header>
-                        
                         <Modal.Body>
+                            {buyer && 
+                        <>
                             <p>NUMERO DE SEGUIMIENTO DE ORDEN : <b>{}</b></p>
                             <ul className="buyers">
+                         
                                 <li>
-                                    <b>NOMBRE: {}</b> 
+                                   <b>NOMBRE : </b><span>{buyer.name}</span> 
                                 </li>
                                 <li>
-                                    <b>TELEFONO: {}</b> 
+                                    <b>TELEFONO : </b><span>{buyer.tel}</span>  
                                 </li>
                                 <li>
-                                    <b>EMAIL: {}</b> 
+                                    <b>EMAIL : </b><span>{buyer.email}</span> 
                                 </li>
+                                
                                 <li>
-                                    <b>FECHA: {}</b> 
-                                </li>
-                                <li>
-                                    <b>DIRECCION DE ENTREGA: {}</b> 
+                                    <b>DIRECCION DE ENTREGA : </b><span>{buyer.direccion} </span>
                                 </li>
                             </ul>
-                                
-                            {items.orderUsser.map(x=>
-                                <ul className="container-order" key={x.id}>
+                        </>
+                        }
+                        
+                                <ul className="container-order">
                                         <li className="order-item">
-                                            <span> PRODUCTO: {x.tittle} </span>
-                                            <span> CANTIDADD: {x.cantidad}</span>
-                                            <span> $ {x.total}</span>
+                                             <b>PRODUCTO : </b> <span>{} </span>
+                                             <b>CANTIDAD : </b> <span>{}</span>
+                                             <b>$ </b><span>{}</span>
                                         </li>
                                         <li className="order-total">
-                                            <span>Total: </span> <span> $ {} </span>{" "}
+                                            <b>Total : </b> <span> $ {} </span>
+                                        </li>
+                                        <li className="order-fecha">
+                                            <b>FECHA : </b><span>{items && fecha(items.date)} </span>
                                         </li>
                                 </ul>
-                             )}
+                                
                         </Modal.Body>
 
                         <Modal.Footer className="modal-footer">

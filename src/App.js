@@ -6,6 +6,7 @@ import Footer from './Components/Footers/Footer'
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import Gallery from './Components/Gallery/Gallery';
+import GallerySend from './Components/Gallery/GallerySend';
 import About from './Components/About/About';
 import ItemCart from './Components/ItemCart/ItemCart';
 import {CartShop} from './Context/CartContext';
@@ -23,6 +24,7 @@ function App() {
                 <Switch>
                     <Route path="/item/:id">
                         <ItemDetailContainer/> 
+                        <GallerySend/>
                     </Route> 
                     <Route path="/catalogo">
                         <ItemListContainer/>
@@ -37,14 +39,17 @@ function App() {
                         <Home/>
                         <ItemHotSaleContainer/>
                         <Gallery/>
+                        <GallerySend/>
                     </Route>
                     <Route exact path="/cart">
                         <Gallery/>
                         <ItemCart/>
+                        <GallerySend/>
                     </Route>
                     <Route exact path="/CheckOut">
                         <Gallery/>
                         <CheckOut/>
+                        <GallerySend/>
                     </Route>
                     <Route exact path="/Orders">
                         <Gallery/>

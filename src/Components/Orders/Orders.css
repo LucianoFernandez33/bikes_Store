@@ -12,7 +12,8 @@
 }
 .modal-content {
     color: white;
-    background-color: #655f5b;
+    background-color: #b5b0ac;
+    border: 2px solid white;
 }
 .modal-body{
     font-variant: all-petite-caps;
@@ -25,7 +26,7 @@
     display: flex;
     justify-content: center;
 }
-.buyers {
+.buyers, .container-order {
     padding: 0px;
     display: flex;
     flex-direction: column;
@@ -33,21 +34,11 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
-.buyers li b, .container-modal-child p, .order-item b, .order-total b,.order-fecha b {
+.buyers li b, .container-modal-child p, .order-total b,.order-fecha b, .container-order b {
     color: black;
     font-weight: 600;
 }
-.container-order {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.order-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+
 .container-button-orders{
     width: 100%;
     display: flex;

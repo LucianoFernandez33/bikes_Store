@@ -1,10 +1,8 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
 import gallery01 from '../../Assets/gallery01.jpg';
-//import gallery02 from '../../Assets/gallery02.jpg';
-//import gallery04 from '../../Assets/gallery04.jpg';
-
 import './Gallery.css';
+
 const Gallery = () => {
 
     return (

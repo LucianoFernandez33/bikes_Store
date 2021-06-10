@@ -1,5 +1,5 @@
 import React, {useContext,useEffect,useState} from 'react'
-import {Link, useParams} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Modal, Button} from 'react-bootstrap';
 import {getFiresTore} from "../../firebase";
 import { CartContext } from '../../Context/CartContext';
@@ -14,11 +14,10 @@ const Orders = () => {
     const [status, setStatus] =useState([])
     
            
-
     useEffect(() => {
         setLoading(true)
         const db = getFiresTore();
-        const orderCollection = db.collection('orders').doc("rpomjePCIvS5FrT7RFo7");
+        const orderCollection = db.collection('orders').doc("x9DhdMjwYyK3fRxxdkf4");
           orderCollection.get()
           .then(res=>{
               if(!res.exists){
@@ -26,7 +25,7 @@ const Orders = () => {
               }
             setItems({orderItem: res.data().items, total: res.data().total, status:res.data().status, date:res.data().date.toDate()})
             console.log(res.data().items)
-            {items !=={} && console.log(items.orderItem,"items")}
+            {items !=={} && console.log(items ,"items")}
             console.log(items)
             setBuyer(res.data().buyer)
             console.log(res.data().buyer.name,"buyer")
@@ -42,9 +41,13 @@ const Orders = () => {
 
           const fecha =(x)=>{
             if(x){
-            return `${x.getDate()}/${(x.getMonth()+1)}/${x.getFullYear()} -${x.getHours()}:${x.getMinutes()}hs`
+            return `${x.getDate()}/${(x.getMonth()+1)}/${x.getFullYear()} -${x.getHours()}:${x.getMinutes()} hs`
             }
         }
+        useEffect(()=>{
+            console.log(items,"items")
+            console.log(items.orderItem,"itemsOrderItem")
+        },[items])
 
     return (
             
@@ -57,9 +60,8 @@ const Orders = () => {
                         <Modal.Body>
                             {buyer && 
                         <>
-                            <p>NUMERO DE SEGUIMIENTO DE ORDEN : <b>{}</b></p>
+                            <p>NUMERO DE SEGUIMIENTO DE ORDEN : <b>{orderUsser}</b></p>
                             <ul className="buyers">
-                         
                                 <li>
                                    <b>NOMBRE : </b><span>{buyer.name}</span> 
                                 </li>
@@ -69,30 +71,35 @@ const Orders = () => {
                                 <li>
                                     <b>EMAIL : </b><span>{buyer.email}</span> 
                                 </li>
-                                
                                 <li>
                                     <b>DIRECCION DE ENTREGA : </b><span>{buyer.direccion} </span>
                                 </li>
+                                <li>
+                                    <b>ESTADO DE COMPRA : </b><span>{status} </span>
+                                </li>
                             </ul>
-                        </>
-                        }
-                        
-                                <ul className="container-order">
-                                        <li className="order-item">
-                                             <b>PRODUCTO : </b> <span>{} </span>
-                                             <b>CANTIDAD : </b> <span>{}</span>
-                                             <b>$ </b><span>{}</span>
-                                        </li>
-                                        <li className="order-total">
-                                            <b>Total : </b> <span> $ {} </span>
-                                        </li>
-                                        <li className="order-fecha">
-                                            <b>FECHA : </b><span>{items && fecha(items.date)} </span>
-                                        </li>
-                                </ul>
-                                
+                                {items && 
+                            <ul className="container-order">
+                                <li>
+                                    <b>PRODUCTO : </b> <span>{items.tittle}</span>
+                                </li>
+                                <li>
+                                    <b>CANTIDAD : </b> <span>{}</span>
+                                </li>
+                                <li>
+                                    <b>$ </b><span>{}</span>
+                                </li>                                
+                                <li className="order-total">
+                                    <b>Total : </b> <span> $ {items.total} </span>
+                                </li>
+                                <li className="order-fecha">
+                                    <b>FECHA : </b><span>{items && fecha(items.date)} </span>
+                                </li>
+                            </ul>}
+                        </>  
+                            }
+                            
                         </Modal.Body>
-
                         <Modal.Footer className="modal-footer">
                             <p>SE HA ENVIADO UN MAIL A SU CORREO CON LOS DATOS DE SU COMPRA Y EL CÓDIGO DE SEGUIMIENTO</p>
                             <p>SI LO PREFIERE PUEDE IMPRIMIR UN COMPROBANTE.</p>

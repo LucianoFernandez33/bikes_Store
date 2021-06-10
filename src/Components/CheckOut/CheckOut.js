@@ -16,11 +16,9 @@ import tilde from '../../Assets/tilde.png';
 export function CheckOut(){
     const {cart, addQuantityPrice,clear,setOrderUsser,orderUsser} = useContext(CartContext)
     const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', emailDos:'', direccion:'', tel: null});
-    const [loading, setLoading] = useState(false);
-    const [err, setError] = useState();
     const [orderId,setOrderId] = useState();
     const [message, setMessage] = useState(null);
-    const [imgError, setImgError] = useState(null);
+    
 
     console.log(cart,"cart");
 
@@ -39,12 +37,11 @@ export function CheckOut(){
             setMessage("");
             toast.info("PROCESANDO COMPRA...");
             createOrder();
-            //clear();
+            clear();
         }
     }
 
      async function createOrder(){
-        setLoading(true)
         const db = getFiresTore();
         const itemsToUpdate = db.collection('items').where(firebase.firestore.FieldPath.documentId(), 'in', cart.map(i=>i.id));
         

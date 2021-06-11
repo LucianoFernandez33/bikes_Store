@@ -8,14 +8,14 @@ const Item = ({img, description, tittle, price, stockTotal, id, descriptionTwo, 
     
     return (
         <div className="container-card-child">
-            <Card style={{ width: '20rem'}}>
+            <Card style={{ width: '100%', height:'100%'}}>
                 <div className="container-img-card">
                     <Card.Img variant="top" src={img} />
                 </div>
-                <Card.Body>
-                    <Card.Title>{tittle}</Card.Title>
+                <Card.Body className="card-body">
+                    <Card.Title className="card-tittle">{tittle}</Card.Title>
                     <Card.Text className="line-sizes">{sizes}</Card.Text>
-                    <Card.Text> $ {price}</Card.Text>
+                    <Card.Text className="card-price"> $ {price}</Card.Text>
                     <Link className="button-link" to={`/item/${id}`}>
                         <Button className="button-Caraterist">Ver Caracteristicas</Button>
                     </Link>

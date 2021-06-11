@@ -14,8 +14,8 @@ const ItemList = ({productos}) =>{
                 <Image className="img-catalogo" src="../fondoBikes.jpg" fluid />
             </div>
             <div className="container-tit">CATÁLOGO DE PRODUCTOS</div>
-            <div>
-                <ul className="navTwo">
+            <div className="container-navTwo">
+                <ul className="navTwo-children">
                     <li><Link to={`/categories/accesorios`}>ACCESORIOS</Link></li>
                     <li><Link to={`/categories/indumentaria`}>INDUMENTARIA</Link></li>
                     <li><Link to={`/categories/bicicletas`}>BICICLETAS</Link></li>

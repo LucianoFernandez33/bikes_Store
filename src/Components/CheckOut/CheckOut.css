@@ -60,6 +60,26 @@
     border: 1px solid white;
     color: white;
 }
+.container-order-ok{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 70px;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+.container-child-order-ok{
+   margin-top:0px;
+   background-color: #b7b2b2;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 20px;
+   width: 55%;
+   padding: 5px
+}
 .error-email {
     color: red;
     text-transform: uppercase;
@@ -75,9 +95,20 @@
    .container-form{
     width: inherit;
     padding-right: 20px;
-}
+    }
 .containerPrincipal-form{
     margin: 0px 53px;
     padding: 29px;
+    }
 }
+@media (min-width: 481px) and (max-width: 700px) {
+    .containerPrincipal-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px 40px;
+        padding: 20px;
+        background-color: whitesmoke;
+    }
 }

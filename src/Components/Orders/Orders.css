@@ -8,12 +8,17 @@
 }
 .container-modal-child {
     top: 25%;
-   
+}
+.container-modal-child h5{
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 .modal-content {
-    color: white;
-    background-color: #b5b0ac;
-    border: 2px solid white;
+    color: rgb(15, 15, 15);
+    background-color: #f3f3f3;
+    border: 2px solid rgb(182, 178, 178);
 }
 .modal-body{
     font-variant: all-petite-caps;
@@ -26,7 +31,8 @@
     display: flex;
     justify-content: center;
 }
-.buyers, .container-order {
+.buyers, .container-order, .order-total {
+    width: 100%;
     padding: 0px;
     display: flex;
     flex-direction: column;
@@ -34,7 +40,11 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
-.buyers li b, .container-modal-child p, .order-total b,.order-fecha b, .container-order b {
+.buyers li, .container-order li, .order-total li{
+    padding: 0px;
+}
+ 
+.buyers li b, .container-modal-child p, .order-total b, .container-order b {
     color: black;
     font-weight: 600;
 }
@@ -47,4 +57,20 @@
 .modal-footer {
     font-size: 70%;
     justify-content: center;
+}
+.container-modal-child span{
+    color: black;
+}
+hr {
+    width: 100%;
+    color: rgb(155, 145, 145);
+    margin: 3px;
+}
+.orderUsuarioId{
+    color: tomato;
+}
+@media print{
+    .container-button-orders{
+        display: none;
+    }
 }

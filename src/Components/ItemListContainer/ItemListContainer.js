@@ -15,14 +15,14 @@ export const ItemListContainer = () => {
 
    useEffect(()=>{
       setLoading(true)
-      const db = getFiresTore();  //guardo en variable db el acceso a mi base de datos en fireBase
-      const itemsCollection = db.collection("items"); //guardo en itemsCollection toda mi coleccion de items de firebase
+      const db = getFiresTore(); 
+      const itemsCollection = db.collection("items"); 
       const filterCollection = id ? itemsCollection.where("category","==", id) : itemsCollection;
-      filterCollection.get() //ejecuto una promesa y ejecuto un .then para capturar la respuesta de la promesa
+      filterCollection.get() 
          .then((todosMisProductos)=>{
-            todosMisProductos.size === 0 ? console.log("no hay items") : console.log(`Hay ${todosMisProductos.size} items`)
+            //todosMisProductos.size === 0 ? console.log("no hay items") : console.log(`Hay ${todosMisProductos.size} items`)
             const documentos  = todosMisProductos.docs.map((doc)=>{
-               return { //armo un objeto nuevo creando una variable id con la info del id del producto y que me lo agregue al doc.data
+               return { 
                   id: doc.id,
                   ...doc.data()
                }}

@@ -24,3 +24,9 @@
         margin: 0px;
     }
 }
+@media (min-width: 480px) and (max-width: 700px) {
+    .container-gallery {
+        background-color: #efefef;
+        margin: 0px 40px;
+    }
+ }

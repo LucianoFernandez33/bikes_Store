@@ -91,6 +91,7 @@ export function CheckOut(){
    
 return (
     <>
+    {!orderId ?
     <div className="containerPrincipal-form">
         <h1>FORMULARIO DE CONTACTO</h1>
         <div className="container-form">
@@ -101,7 +102,7 @@ return (
             <Input type="email" event={handleInputChange} text="Email" name="email"></Input>
             <Input type="email" event={handleInputChange} text="Validar Email" name="emailDos"></Input>
                 <p className="error-email">{message}</p>
-            {!orderId ?
+            
             <div className="containerForm-buttons">
                 <Link to={`/cart`} className="button-volver">VOLVER</Link>
                 <ButtonOrder  name={userInfo.name} surname={userInfo.surname} tel={userInfo.tel} email={userInfo.email}event={onSubmit}></ButtonOrder>                
@@ -115,21 +116,23 @@ return (
                     pauseOnFocusLoss
                     draggable
                     pauseOnHover/>
-            </div> :
-            <div>
-                    
-                    <div style={{marginTop: '0px'}}>
-                    <img src={tilde} alt=""/>
-                        <p style={{color: 'black', fontWeight: 'bold', textDecoration: 'underline',marginTop: '5px'}}>Nº DE ORDEN: </p>
-                        <p style={{backgroundColor: '#29c4f3', color: 'white'}}>{orderId}</p>
-                        <Link to={`/Orders`}><Button variant="secondary">VER ORDEN DE COMPRA</Button></Link>
-                    </div>
-                </div>
-                }
-        </div>
+            </div> 
+        </div>  
     </div>
-    
-    </>
+         :
+            <div className="container-order-ok">
+                <div className="container-child-order-ok">
+                    <h5>SU ORDEN FUÉ GENERADA CON ÉXITO !</h5>
+                    <img src={tilde} alt=""/>
+                    <p style={{color: 'black', fontWeight: 'bold', textDecoration: 'underline',marginTop: '5px'}}>Nº DE ORDEN: </p>
+                    <p style={{backgroundColor: '#29c4f3', color: 'white'}}>{orderId}</p>
+                    <Link to={`/Orders`}><Button variant="secondary">VER ORDEN DE COMPRA</Button></Link>
+                </div>
+            </div>
+               
+        }
+        
+        </>
 )
 }
 export default CheckOut;

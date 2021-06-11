@@ -37,4 +37,16 @@
         background-color: #efefef;
         margin: 0px;
     }
+    .container-cards-sponsors {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 3px;
+    }
+}
+@media (min-width: 481px) and (max-width: 700px) {
+    .container-home {
+        background-color: #efefef;
+        margin: 0px 40px;
+    }
 }

@@ -1,6 +1,6 @@
 # Bienvenido a mi Ecommerce BIKE-SOTRE!
 
- ![ Alt text](bikeStore. gif) / ! [](bikeStore. gif)
+ ![](archivo.gif)
 
 Esta app de Ecommerce nació en el curso de react js en CoderHouse como práctica y entendimiento de desafíos.
 A continuación te dejaré unos pasos que debes seguir para poder ver mi proyecto en tu ordenador, en la terminal de tu editor de código:
@@ -43,5 +43,5 @@ Este sitio web consta de 5 secciones para navegar:
 
  Luciano Fernandez
 
- - GitHub [@Luciano](https://github.com/LucianoFernandez33)
- - LinkedIn: [@Luciano](https://www.linkedin.com/in/luciano-fernandez-3791761ab/)
+ - ![](gitHub.png) GitHub [@Luciano](https://github.com/LucianoFernandez33)
+ - ![](linkedIn.png) LinkedIn: [@Luciano](https://www.linkedin.com/in/luciano-fernandez-3791761ab/)

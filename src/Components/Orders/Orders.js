@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import {Modal, Button} from 'react-bootstrap';
 import {getFiresTore} from "../../firebase";
 import { CartContext } from '../../Context/CartContext';
+import logo2 from '../../Assets/logo2.png'
+import Loading from '../../Components/Loading/Loading'
 import './Orders.css'
 
 const Orders = () => {
@@ -24,13 +26,8 @@ const Orders = () => {
                   setError(true)
               }
             setItems({orderItem: res.data().items, total: res.data().total, status:res.data().status, date:res.data().date.toDate()})
-            console.log(res.data().items)
-            {items !=={} && console.log(items ,"items")}
-            console.log(items)
             setBuyer(res.data().buyer)
-            console.log(res.data().buyer.name,"buyer")
             setStatus(res.data().status)
-            console.log(status)
             setLoading(true)
           })
             .catch((err)=>{
@@ -45,16 +42,17 @@ const Orders = () => {
             }
         }
         useEffect(()=>{
-            console.log(items,"items")
-            console.log(items.orderItem,"itemsOrderItem")
+            
         },[items])
 
     return (
-            
+        <div>
+        {loading ? <Loading /> :
             <div  className="container-modal">
                 <div id="imprimeme" className="container-modal-child" >
                     <Modal.Dialog >
-                        <Modal.Header >
+                        <Modal.Header className="modal-header-imprimime" >
+                            <img src={logo2} className="App-logo" alt="logo" />
                             <Modal.Title>FACTURA DE COMPRA</Modal.Title>
                         </Modal.Header>
                         
@@ -79,6 +77,7 @@ const Orders = () => {
                                 </li>
                             </ul>
                             <hr />
+                            <h5>PRODUCTO/S COMPRADOS/S</h5>
                             <ul className="container-order">
                                {items.orderItem.map(x=>
                                 <>
@@ -124,7 +123,8 @@ const Orders = () => {
                     </Modal.Dialog>
                 </div>
             </div>
-        
+        }  
+        </div>
     )
 }
 

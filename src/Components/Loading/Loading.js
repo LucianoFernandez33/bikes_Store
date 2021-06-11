@@ -1,5 +1,4 @@
 import React from 'react';
-import loading from '../../Assets/loading.gif';
 import rueda from '../../Assets/rueda.gif';
 import './Loading.css';
 

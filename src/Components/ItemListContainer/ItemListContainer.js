@@ -3,7 +3,7 @@ import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css'
 import { useParams } from "react-router";
 import {getFiresTore} from "../../firebase";
-import Loading from '../../Components/Loading/Loading'
+import Loading from '../../Components/Loading/Loading';
 
 
 export const ItemListContainer = () => {
@@ -40,7 +40,7 @@ useEffect(()=>{
    
 return(
   <div className="container-products">
-     {datos.length > 0 ? <ItemList productos={datos}/> :  <Loading />}
+     {loading ? <Loading /> : <ItemList productos={datos}/>}
   </div>
 );
       

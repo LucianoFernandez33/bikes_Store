@@ -1,16 +1,16 @@
 .container-gallerySend {
     background-color: #efefef;
     margin: 0px 70px;
-    height: 185px;
+    height: 140px;
 }
 .imageGallery{
-    width: 12%;
+    width: 6%;
     padding: 5px;
 }
 .container-figures{
     display: flex;
     justify-content: space-evenly;
-    margin: 0px 5px;
+    margin: 2px 5px;
 }
 
 @media (max-width:480px) {

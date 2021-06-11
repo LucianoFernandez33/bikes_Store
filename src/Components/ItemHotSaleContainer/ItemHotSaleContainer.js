@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ItemHotSale from "../ItemHotSale/ItemHotSale";
 import './ItemHotSaleContainer.css'
-import {Spinner} from 'react-bootstrap';
 import {getFiresTore} from "../../firebase";
+import Loading from '../../Components/Loading/Loading';
 
 export const ItemHotSaleContainer = () => {
    
@@ -35,9 +35,10 @@ useEffect(()=>{
    //datos.length && console.log(datos)
 }, [datos])
    
+//{datos.length > 0 ? <ItemHotSale productos={datos}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
 return(
   <div className="container-products">
-     {datos.length > 0 ? <ItemHotSale productos={datos}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
+      {loading ? <Loading /> : <ItemHotSale productos={datos}/>}
   </div>
 )
       

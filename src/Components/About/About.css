@@ -9,6 +9,7 @@
     align-items: center;
     border: none;
     border-radius: 30px;
+    padding: 10px;
 }
 .container-card-two img {
     width: 70%;

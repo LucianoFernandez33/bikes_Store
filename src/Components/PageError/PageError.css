@@ -1,0 +1,18 @@
+.container-father {
+    height: 100vh;
+    position: relative;
+}
+
+.container-children-error404 {
+    width: 50%;
+    margin: 0;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container-children-error404 img {
+    width: 75%;
+}

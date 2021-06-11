@@ -11,7 +11,7 @@ const GallerySend = () => {
 
     return (
         <div className="container-gallerySend">
-            <Figure>
+            <Figure style={{padding:'16px'}}>
                 <div className="container-figures"> 
                     <Figure.Image className="imageGallery"
                         src={visa}

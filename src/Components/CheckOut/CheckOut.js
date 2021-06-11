@@ -14,14 +14,11 @@ import tilde from '../../Assets/tilde.png';
 
 
 export function CheckOut(){
-    const {cart, addQuantityPrice,clear,setOrderUsser,orderUsser} = useContext(CartContext)
+    const {cart, addQuantityPrice,clear,setOrderUsser} = useContext(CartContext)
     const [userInfo, setUserInfo] = useState({name:'', surname:'', email: '', emailDos:'', direccion:'', tel: null});
     const [orderId,setOrderId] = useState();
     const [message, setMessage] = useState(null);
     
-
-    console.log(cart,"cart");
-
     
     function handleInputChange(evt){
         setUserInfo({
@@ -32,7 +29,6 @@ export function CheckOut(){
     function onSubmit() {
         if(userInfo.email !== userInfo.emailDos){
             setMessage("**Parece que los emails que ingresaste no coinciden**")
-            console.log("mails incorrectos")
           }else{
             setMessage("");
             toast.info("PROCESANDO COMPRA...");
@@ -44,7 +40,7 @@ export function CheckOut(){
      async function createOrder(){
         const db = getFiresTore();
         const itemsToUpdate = db.collection('items').where(firebase.firestore.FieldPath.documentId(), 'in', cart.map(i=>i.id));
-        
+
         const query = await itemsToUpdate.get();
         const batch = db.batch();
         const outOfStock = [];
@@ -71,13 +67,10 @@ export function CheckOut(){
                 setOrderId(id)
                 setOrderUsser(id,userInfo,cart)
                 console.log(id)
-            }catch(err){console.log(err)}
+            }catch(err){console.log(err)} 
         }
     } 
-    console.log(userInfo)
-    console.log(orderId, "OrderId")
-    console.log(orderUsser,"- guardado en cartcontext orderUsser")
-
+    
     function printDiv(imprimeme) {
         var contenido= document.getElementById(imprimeme).innerHTML;
         var contenidoOriginal= document.body.innerHTML;

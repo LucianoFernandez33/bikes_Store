@@ -20,7 +20,6 @@ export const ItemListContainer = () => {
       const filterCollection = id ? itemsCollection.where("category","==", id) : itemsCollection;
       filterCollection.get() 
          .then((todosMisProductos)=>{
-            //todosMisProductos.size === 0 ? console.log("no hay items") : console.log(`Hay ${todosMisProductos.size} items`)
             const documentos  = todosMisProductos.docs.map((doc)=>{
                return { 
                   id: doc.id,

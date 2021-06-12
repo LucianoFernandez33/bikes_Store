@@ -32,10 +32,9 @@ export const ItemHotSaleContainer = () => {
    .finally(()=>setLoading(false))
 }, []);
 useEffect(()=>{
-   //datos.length && console.log(datos)
+   
 }, [datos])
    
-//{datos.length > 0 ? <ItemHotSale productos={datos}/> :  <Spinner className="spinner" animation="border" variant="primary" />}
 return(
   <div className="container-products">
       {loading ? <Loading /> : <ItemHotSale productos={datos}/>}

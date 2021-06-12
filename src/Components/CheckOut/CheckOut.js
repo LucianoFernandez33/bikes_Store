@@ -66,7 +66,6 @@ export function CheckOut(){
                 const {id} = await orders.add(newOrders)
                 setOrderId(id)
                 setOrderUsser(id,userInfo,cart)
-                console.log(id)
             }catch(err){console.log(err)} 
         }
     } 

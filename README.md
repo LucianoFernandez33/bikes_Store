@@ -21,25 +21,25 @@ A continuación te dejaré unos pasos que debes seguir para poder ver mi proyect
 
 ## Navegabilidad
 
-Este sitio web consta de 5 secciones para navegar:
+Este sitio web consta de 6 secciones para navegar:
 
     1. HOME 
         - Con carusel e img con las marcas de sponsors
         - Catálogo de HotSale
     2. PRODUCTOS 
-        - Con catalogo con posibilidad de filtrar para ver TODO el contenido, o ver por categoria
+        - Con catalogo con posibilidad de filtrar para ver TODO el contenido, o ver por categoría
     3. DETALLES 
         - Para ver el detalle del producto solicitado
     4. NOSOTROS
-        - Quienes somos y a que nos dedicamos
+        - Quienes somos y a qué nos dedicamos
     - CARRITO
         - Donde visulizaremos nuestro carrito con los productos que estamos interesados en comprar
     5. CHECK OUT
         - Encontraremos un formulario para completar con nuestros datos para el contacto y envío del producto
     6. ORDERS
-        - Una vez generado el formulario, se confirma la compra y Firebase nos devuelve un ID de seguimiento del producto
+        - Una vez generado el formulario, se confirma la compra y Firebase nos devuelve un ID de seguimiento del producto con opción a imprimir comprobante de compra
 
-## Autor de Proyecto
+## Autor del Proyecto
 
  Luciano Fernandez
 
